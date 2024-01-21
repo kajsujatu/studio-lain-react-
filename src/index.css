@@ -1,13 +1,376 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+:root {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  --main-color: #202020;
+  --black-color: #121212;
+  --white-color: #ffffff;
+  --bright-color-100: #f3f3f3;
+  --bright-color: #e7e9ec;
+  --gray-color-light: #c7c7c7;
+  --gray-color: #9d9d9d;
+  --ff-primary: 'Poppins', sans-serif;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fs-300: ;
+  --fs-400: 0.9rem;
+  --fs-500: 1rem;
+  --fs-600: 1.1rem;
+  --fs-700: 1.2rem;
+  --fs-800: 1.3rem;
+  --fs-900: 1.9rem;
+  --fs-xl: 10rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a,
+a:hover,
+a:link {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--main-color);
+}
+
+:focus {
+  outline: 1px solid var(--gray-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: var(--bright-color);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: var(--gray-color);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--main-color);
+    background-color: var(--gray-color);
+  }
+  a:hover {
+    color: var(--gray-color);
+  }
+  button {
+    background-color: var(--gray-color);
+  }
+}
+
+/* **************** dark mode **************** */
+
+body.dark-mode {
+  background-color: var(--main-color);
+  color: var(--gray-color-light);
+}
+
+body.dark-mode img {
+  filter: brightness(0.95); 
+}
+
+body.dark-mode div {
+  background-color: var(--main-color);
+  color: var(--gray-color-light);
+}
+
+body.dark-mode select,
+body.dark-mode input {
+  background-color: #3d3d3d;
+  color: #a8a8a8;
+}
+
+body.dark-mode ul a {
+  color: #ffffff;
+}
+
+body.dark-mode a {
+	color: var(--gray-color);
+  }
+
+body.dark-mode header a {
+  color: var(--gray-color);
+}
+
+/* body.dark-mode .cover,
+body.dark-mode .container_covers > img,
+body.dark-mode .related_comics {
+  box-shadow: none;
+  filter: brightness(0.1);
+} */
+
+body.dark-mode .container_page {
+  border: 17px solid var(--main-color);
+  background-color: var(--main-color);
+}
+
+body.dark-mode .customize {
+  color: #b7b7b7;
+}
+
+body.dark-mode .sort_input,
+body.dark-mode .filters_input,
+body.dark-mode .search_main_cover_input {
+  background-color: #343434;
+  color: #b7b7b7;
+}
+
+body.dark-mode .breadcrumbs_element {
+  color: var(--gray-color);
+}
+
+body.dark-mode .breadcrumbs .title {
+  font-weight: 500;
+  color: #d7d7d7;
+}
+
+
+
+
+
+/* **************** SMALL DEVICES **************** */
+
+
+@media (max-width: 55rem) { /* 880px */
+
+	.navbar {
+		grid-template-columns: auto auto;
+	}
+
+	.navbar_links {
+		display: none;
+		width: 100%;
+	}
+
+	.navbar_links.active {
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		display: grid;
+		grid-auto-flow: row;
+		row-gap: 1rem;
+		padding-inline-start: 0;
+		padding-block-end: 1rem;
+		background-color: var(--main-color);
+		z-index: 99;
+		animation: ease-down-2 .15s ease-out;
+	}
+
+	@keyframes ease-down-2 {
+		from {
+			height: 0;
+		}
+		to {
+			height: 14rem;
+		}
+	}
+
+	.navbar_links li {
+		text-align: center;
+	}
+
+	.navbar_links a {
+		border: 0;
+	}
+
+	.additions {
+		position: absolute;
+		top: 1.6rem;
+		right: 2rem;
+	}
+
+	.toggle_button {
+		position: absolute;
+		top: 34.5px;
+		right: calc(50% - 15px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 21px;
+	}
+
+	.toggle_button .bar {
+		height: 3px;
+		width: 100%;
+		background-color: var(--bright-color);
+		border-radius: 10px;
+	}
+
+	.description {
+		padding-block-start: 1.25rem;
+		padding-inline: 0.5rem;
+	}
+}
+
+@media (max-width: 40rem) { /* 640px */
+
+	.customize {
+		margin-block-start: 1rem;
+		grid-template-columns: auto;
+		row-gap: 1rem;
+	}
+
+	.sort > :nth-child(odd),
+	.filters > :nth-child(odd),
+	.search_main_cover > :nth-child(odd) {
+	text-align: left;
+	}
+
+	.sort-input,
+	.filters-input,
+	.search-main-cover-input {
+		width: min(17.5rem, 24rem);
+		height: 2rem;
+	    font-size: .9rem;
+		background-color: #D7D7D7;
+		border: 0;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 45.625rem) { /* 730px */
+
+	.comics_preview {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.comics_preview_img {
+		display: flex;
+		justify-content: center;
+	}
+
+	.comics_preview_img img {
+		max-width: 90%;
+		width: 300px;
+	}
+
+	.bio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.image_logo {
+		display: flex;
+		justify-content: center;
+	}
+	
+}
+
+@media (max-width: 33.313rem) { /* 533px */
+
+	header {
+		height: 4.3rem;
+	}
+
+	.logo {
+		width: 6.25rem;
+		height: auto;
+		margin-top: .3rem;
+	}
+
+	.toggle-button {
+		top: 1.5rem;
+	}
+
+	.additions {
+		top: 1rem;
+	}
+
+	.navbar-links.active {
+		top: 3.3rem;
+	}
+
+	.cover {
+		width: 290px;
+		height: 400px;
+	}
+
+	.cover_big,
+	.container_covers,
+	.inside_thumbnails {
+		width: 100%;
+		height: auto;
+	}
+
+	.breadcrumbs {
+		grid-template-columns: none;
+		grid-template-rows: auto auto;
+		justify-content: center;
+		margin-top: .5rem;
+		gap: .5rem;
+	}
+
+	.container-page {
+		margin-top: 56px;
+		padding: 14px;
+	}
+
+	.related_comics_section {
+		grid-auto-flow: row;
+	}
+
+	.related_comics_section::before {
+		width: 10rem;
+	}
+
+	.sold::before,
+	.last_items::before {
+		top: 17.9rem;
+	}
+}
+
+@media (max-width: 25rem) { /* 400px */
+
+	.inside_panels_headline {
+		gap: 0;
+		width: 80%;
+	}
+
+	.inside_samples {
+		text-align: center;
+	}
 }
