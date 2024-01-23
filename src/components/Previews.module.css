@@ -45,7 +45,7 @@
 .comics_preview {
   display: flex;
   column-gap: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1.2rem;
   border: 4px solid #dcdcdc;
   padding: 1rem;
   background-color: var(--bright-color-100);
@@ -96,22 +96,22 @@ h1.title {
   margin-block-end: 0.4rem;
 }
 
-@media (max-width: 45.625rem) { /* 730px */
+@media (max-width: 45.625rem) {
+  /* 730px */
 
-	.comics_preview {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+  .comics_preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-	.comics_preview_img {
-		display: flex;
-		justify-content: center;
-	}
+  .comics_preview_img {
+    display: flex;
+    justify-content: center;
+  }
 
-	.comics_preview_img img {
-		max-width: 90%;
-		width: 300px;
-	}
-
+  .comics_preview_img img {
+    max-width: 90%;
+    width: 300px;
+  }
 }

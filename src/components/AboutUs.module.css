@@ -94,3 +94,30 @@ h1.title {
   margin-block-start: 0.8rem;
   margin-block-end: 0.4rem;
 }
+
+
+.bio {
+	display: flex;
+	gap: 2rem;
+}
+
+.image_logo {
+	flex: 1;
+}
+.image_logo img {
+	width: 200px;
+}
+
+.contact {
+	line-height: .7rem;
+}
+
+
+@media (max-width: 33.313rem) {
+  /* 533px */
+  .bio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}

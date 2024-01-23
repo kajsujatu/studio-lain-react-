@@ -85,7 +85,7 @@
 
 .last_items::after {
   content: 'OSTATNIE SZTUKI';
-  width: 10.5rem;
+  width: 11rem;
   top: 65%;
   background-color: #9b3838;
   padding: 10px 15px 10px 15px;

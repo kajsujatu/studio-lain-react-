@@ -78,7 +78,7 @@ const Navigation = ({ comicsData }) => {
         >
           <img
             className={styles.logo}
-            src='img/studio-lain_logo.png'
+            src='../img/studio-lain_logo.png'
             alt='Studio Lain'
           />
         </NavLink>
@@ -127,7 +127,7 @@ const Navigation = ({ comicsData }) => {
             >
               <img
                 className={styles.icon}
-                src='img/icon-facebook.svg'
+                src='../img/icon-facebook.svg'
                 alt='Facebook'
               />
             </a>
@@ -137,7 +137,7 @@ const Navigation = ({ comicsData }) => {
           <img
             onClick={toggleSearchBar}
             className={styles.icon_search}
-            src='img/icon-search.svg'
+            src='../img/icon-search.svg'
             alt='Wyszukaj'
           />
           <button
@@ -157,48 +157,46 @@ const Navigation = ({ comicsData }) => {
         }`}
       >
         <div className={styles.search_layout}>
-        <div className={styles.container}>
-          <input
-            className={styles.search_input}
-            value={searchInput}
-            onChange={(e) => {
-              setSearchInput(e.target.value);
-              handleSearchInput();
-            }}
-          />
-          <div className={styles.icon_container}>
-            <img
-              className={`${styles.icon} ${styles.icon_search_content}`}
-              src='img/icon-search.svg'
-              alt='Wyszukaj'
-              onClick={handleSearchInput}
+          <div className={styles.container}>
+            <input
+              className={styles.search_input}
+              value={searchInput}
+              onChange={(e) => {
+                setSearchInput(e.target.value);
+                handleSearchInput();
+              }}
             />
-            <img
-              className={styles.icon}
-              id='icon-return'
-              src='img/icon-return.svg'
-              alt='Wyczyść'
-              onClick={clearSearchResults}
-            />
-            <img
-              className={styles.icon}
-              onClick={toggleSearchBar}
-              id='search-layout-close'
-              src='img/icon-close.svg'
-              alt='Zamknij'
-            />
+            <div className={styles.icon_container}>
+              <img
+                className={`${styles.icon} ${styles.icon_search_content}`}
+                src='../img/icon-search.svg'
+                alt='Wyszukaj'
+                onClick={handleSearchInput}
+              />
+              <img
+                className={styles.icon}
+                src='../img/icon-return.svg'
+                alt='Wyczyść'
+                onClick={clearSearchResults}
+              />
+              <img
+                className={styles.icon}
+                onClick={toggleSearchBar}
+                src='../img/icon-close.svg'
+                alt='Zamknij'
+              />
+            </div>
+            <output className={styles.search_output}>
+              {searchResults.map((result) => (
+                <Link to={`/komiks/${result.url}`} onClick={toggleSearchBar}>
+                  <div className={styles.search_output_single} key={result.id}>
+                    {parse(result.title)}
+                  </div>
+                </Link>
+              ))}
+            </output>
           </div>
-          <output className={styles.search_output}>
-            {searchResults.map((result) => (
-              <Link to={`/komiks/${result.url}`} onClick={toggleSearchBar}>
-                <div className={styles.search_output_single} key={result.id}>
-                  {parse(result.title)}
-                </div>
-              </Link>
-            ))}
-          </output>
         </div>
-      </div>
       </div>
     </header>
   );

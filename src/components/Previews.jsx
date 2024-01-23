@@ -28,11 +28,6 @@ const Previews = () => {
             Przeczytaj wywiad: <b> Podsumowanie mijającego roku i zapowiedzi na 2024 r.</b>
           </a>
         </p>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div className={styles.comics_preview}>
           <div className={styles.comics_preview_img}>
             <img src='./img/zapowiedzi/acriborea.webp'></img>

@@ -13,7 +13,7 @@ const App = () => {
   const [selectedComic, setSelectedComic] = useState(null);
 
   useEffect(() => {
-    fetch('./comics.json')
+    fetch('/comics.json')
       .then((response) => response.json())
       .then((data) => setComics(data))
       .catch((error) => console.error('Error fetching comics:', error));

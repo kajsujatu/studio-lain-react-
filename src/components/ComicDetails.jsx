@@ -3,50 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import styles from './ComicDetails.module.css';
 import parse from 'html-react-parser';
 import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
-import 'simplelightbox/dist/simple-lightbox.min.css'; // Import stylów CSS
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { useTheme } from './ThemeContext';
 
 const ComicDetails = ({ comicsData }) => {
-  /* window.addEventListener('load', (event) => {
-    // Kod, który wykonuje się po załadowaniu strony
-
-
-    // Sprawdź, czy selectedComic i selectedComic.img istnieją
-    if (
-      selectedComic &&
-      selectedComic.img &&
-      selectedComic.img.coverMainSiteDesktop
-    ) {
-      // Utwórz nowy obiekt obrazu
-      const image = new Image();
-
-      // Ustaw atrybut src obrazu na wartość selectedComic.img.coverMainSiteDesktop
-      image.src = selectedComic.img.coverMainSiteDesktop;
-
-      // Dodaj obsługę zdarzenia, które będzie wywoływane, gdy obraz zostanie załadowany
-      image.onload = () => {
-        // Utwórz lub pobierz element img z drzewa DOM
-        let imgElement = document.getElementById('myImage'); // Zmień 'myImage' na identyfikator elementu img
-
-        // Jeśli element nie istnieje, utwórz go
-        if (!imgElement) {
-          imgElement = document.createElement('img');
-          imgElement.id = 'myImage'; // Nadaj identyfikator elementowi img
-          document.body.appendChild(imgElement); // Dodaj element do body lub innego rodzica
-        }
-
-        // Ustaw atrybut src elementu img na załadowaną ścieżkę obrazu
-        imgElement.src = selectedComic.img.coverMainSiteDesktop;
-
-        // Możesz także dostosować inne atrybuty lub styl elementu img wg potrzeb
-      };
-
-      // Obsługa zdarzenia, gdy obraz nie zostanie załadowany poprawnie
-      image.onerror = () => {
-        console.error('Wystąpił błąd podczas ładowania obrazu.');
-      };
-    }
-  }); */
 
   const { isDarkMode, toggleTheme } = useTheme();
 
@@ -56,7 +16,7 @@ const ComicDetails = ({ comicsData }) => {
   const selectedComic = comicsData.find((comic) => comic.url === url);
 
   const [selectedCover, setSelectedCover] = useState(
-    selectedComic.img.coverBasic
+       selectedComic?.img?.coverBasic
   );
 
   const [selectedComicCover, setSelectedComicCover] = useState(null);
@@ -71,7 +31,7 @@ const ComicDetails = ({ comicsData }) => {
   }, [selectedComic]); // Uruchom efekt tylko raz po załadowaniu strony i tylko wtedy, gdy selectedComic się zmieni
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+   // window.scrollTo(0, 0);
   }, [selectedComicCover]);
 
   const handleThumbnailClick = (thumbnail) => {
