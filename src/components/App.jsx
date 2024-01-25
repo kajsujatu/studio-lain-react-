@@ -5,8 +5,9 @@ import ComicDetails from './ComicDetails';
 import { ThemeProvider } from './ThemeContext';
 import CustomizationPanel from './CustomizationPanel';
 import Footer from './Footer';
-import Previews from './Previews';
-import AboutUs from './AboutUs';
+import Previews from '../pages/Previews';
+import AboutUs from '../pages/AboutUs';
+import WhereToBuy from '../pages/WhereToBuy';
 
 const App = () => {
   const [comics, setComics] = useState([]);
@@ -24,12 +25,6 @@ const App = () => {
     setSelectedComic(selected);
   };
 
-  const coverMainSiteDesktop =
-    selectedComic &&
-    selectedComic.img &&
-    selectedComic.img.coverMainSiteDesktop;
-  console.log(coverMainSiteDesktop);
-
   return (
     <Router>
       <ThemeProvider>
@@ -46,15 +41,13 @@ const App = () => {
           />
           <Route path='/plany-wydawnicze' element={<Previews />} />
           <Route path='/o-nas' element={<AboutUs />} />
+          <Route path='/gdzie-kupic' element={<WhereToBuy />} />
         </Routes>
 
         {selectedComic &&
           selectedComic.img &&
-          selectedComic.img.coverMainSiteDesktop (
-            <ComicDetails
-              comicsData={comics} 
-              selectedComic={selectedComic}
-            />
+          selectedComic.img.coverMainSiteDesktop(
+            <ComicDetails comicsData={comics} selectedComic={selectedComic} />
           )}
 
         <Footer />

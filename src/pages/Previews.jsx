@@ -1,31 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import Breadcrumbs from '../components/Breadcrumbs';
 import styles from './Previews.module.css';
 
 const Previews = () => {
+  useEffect(() => {
+    document.title = `Studio Lain - Plany wydawnicze`;
+  }, []);
   return (
     <>
-      <div className={styles.breadcrumbs}>
-        <div className={styles.breadcrumbs_element}>
-          <Link to='/' className={styles.back_link_top}>
-            Wróć
-          </Link>
-        </div>
-        <div className={styles.breadcrumbs_element}>
-          <Link to='/plany-wydawnicze' className={styles.catalog_link_top}>
-            Plany wydawnicze
-          </Link>
-          <span className={styles.title}></span>
-        </div>
-      </div>
+      <Breadcrumbs />
 
       <main className={styles.container_page}>
         <p>
           <a
-            href='https://blogokomiksach.blogspot.com/2023/12/studio-lain-podsumowanie-mijajacego.html?fbclid=IwAR0rQzA8oL5OqhUmMtLzGAjX_KM9I3I6KZsmYyD3hBDsXrFtJZ5bvDnpMHo'
+            href='https://blogokomiksach.blogspot.com/2023/12/studio-lain-podsumowanie-mijajacego.html'
             target='_blank'
           >
-            Przeczytaj wywiad: <b> Podsumowanie mijającego roku i zapowiedzi na 2024 r.</b>
+            Przeczytaj wywiad:{' '}
+            <b> Podsumowanie mijającego roku i zapowiedzi na 2024 r.</b>
           </a>
         </p>
         <div className={styles.comics_preview}>

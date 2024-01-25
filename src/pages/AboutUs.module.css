@@ -1,43 +1,12 @@
-.breadcrumbs {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: start;
-  gap: 1.3rem;
-  max-width: 62rem;
-  height: 3rem;
-  line-height: 3rem;
-  margin: 2rem auto 0 auto;
-  position: relative;
-}
 
-.breadcrumbs > * {
-  background-color: var(--bright-color-100);
-  border-radius: 0.7rem 0.7rem 0 0;
-  padding: 0 1.6rem;
-  text-align: center;
-}
-
-.breadcrumbs_element {
-  color: var(--main-color);
-}
-
-.breadcrumbs .title {
-  font-weight: 600;
-  color: var(--main-color);
-}
-
-.back_link_top {
-  cursor: pointer;
-}
 .container_page {
   max-width: 65.5rem;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin: 0 auto 1.8rem auto;
   padding: 28px;
-  /*	background-color: var(--bright-color-100); */
   border: 17px solid var(--main-color);
   border-radius: 10px;
 }

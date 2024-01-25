@@ -1062,7 +1062,7 @@
     },
     "filter": "alan-moore",
     "new": false,
-    "availability": true,
+    "availability": false,
     "buyShops": {
       "buyShop1": "komiksiarnia.pl"
     },
@@ -1635,8 +1635,8 @@
     },
     "filter": "seria-slaine",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl"
     },
@@ -2168,7 +2168,7 @@
     },
     "filter": "seria-solo",
     "new": false,
-    "availability": true,
+    "availability": false,
     "buyShops": {
       "buyShop1": "robmydobrze.pl"
     },
@@ -2377,13 +2377,13 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
-      "buyShop1": "gildia.pl"
+      "buyShop1": "komiksiarnia.pl"
     },
     "buyLinks": {
-      "buyLink1": "https://www.gildia.pl/komiksy/390839-boze-dzialo"
+      "buyLink1": "https://komiksiarnia.pl/studio-lain/7582-boze-dzialo.html"
     },
     "url": "boze-dzialo"
   },
@@ -2634,8 +2634,8 @@
     },
     "filter": "alan-moore",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl"
     },
@@ -3878,8 +3878,8 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "robmydobrze.pl"
@@ -4200,8 +4200,8 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
@@ -4326,8 +4326,8 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
@@ -4451,8 +4451,8 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",

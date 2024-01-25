@@ -3,9 +3,14 @@ import { Link, NavLink, useParams } from 'react-router-dom';
 import { useTheme } from './ThemeContext';
 import styles from './Navigation.module.css';
 import parse from 'html-react-parser';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 const Navigation = ({ comicsData }) => {
   const { isDarkMode, toggleTheme } = useTheme();
+
+  const toggleDarkMode = (checked) => {
+    toggleTheme();
+  };
 
   const [navbarLinksVisible, setNavbarLinksVisible] = useState(false);
 
@@ -118,6 +123,16 @@ const Navigation = ({ comicsData }) => {
               o nas
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to='/gdzie-kupic'
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              gdzie kupić?
+            </NavLink>
+          </li>
           <li className={styles.facebook}>
             <a
               aria-label='facebook'
@@ -140,9 +155,13 @@ const Navigation = ({ comicsData }) => {
             src='../img/icon-search.svg'
             alt='Wyszukaj'
           />
-          <button
+          <DarkModeSwitch
             className={styles.toggle_button_theme}
-            onClick={toggleTheme}
+            checked={isDarkMode}
+            onChange={toggleDarkMode}
+            size={28}
+            moonColor='#9d9d9d'
+            sunColor='#9d9d9d'
           />
         </div>
       </nav>

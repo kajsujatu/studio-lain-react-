@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import styles from './ComicDetails.module.css';
 import parse from 'html-react-parser';
 import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
@@ -7,7 +7,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { useTheme } from './ThemeContext';
 
 const ComicDetails = ({ comicsData }) => {
-
   const { isDarkMode, toggleTheme } = useTheme();
 
   const [showBuyLinks, setShowBuyLinks] = useState(false);
@@ -16,22 +15,31 @@ const ComicDetails = ({ comicsData }) => {
   const selectedComic = comicsData.find((comic) => comic.url === url);
 
   const [selectedCover, setSelectedCover] = useState(
-       selectedComic?.img?.coverBasic
+    selectedComic?.img?.coverBasic
   );
 
   const [selectedComicCover, setSelectedComicCover] = useState(null);
- 
- 
+
+  const navigate = useNavigate();
+  const handleClick = () => navigate(-1);
+
   useEffect(() => {
-    // Załaduj wybrany cover po załadowaniu się strony
     if (selectedComic) {
       setSelectedComicCover(selectedComic);
       setSelectedCover(selectedComic?.img.coverBasic);
     }
-  }, [selectedComic]); // Uruchom efekt tylko raz po załadowaniu strony i tylko wtedy, gdy selectedComic się zmieni
+  }, [selectedComic]);
 
   useEffect(() => {
-   // window.scrollTo(0, 0);
+    if (selectedComic) {
+      document.title = selectedComic
+        ? `Studio Lain - ${selectedComic.title}`
+        : 'Studio Lain';
+    }
+  }, [selectedComic]);
+
+  useEffect(() => {
+    // window.scrollTo(0, 0);
   }, [selectedComicCover]);
 
   const handleThumbnailClick = (thumbnail) => {
@@ -45,7 +53,7 @@ const ComicDetails = ({ comicsData }) => {
   // simplelightbox
   useEffect(() => {
     if (!selectedComic) {
-      return; // Zwracamy null, jeśli selectedComic nie istnieje
+      return;
     }
 
     const lightbox = new SimpleLightbox('.gallery a');
@@ -63,28 +71,22 @@ const ComicDetails = ({ comicsData }) => {
     return <div>Nie znalazłem takiej strony.</div>;
   }
 
-  const coverMainSiteDesktop =
-    selectedComic &&
-    selectedComic.img &&
-    selectedComic.img.coverMainSiteDesktop &&
-    selectedComic.relatedComics.relatedComicsImg;
-
-  console.log(coverMainSiteDesktop);
-
   return (
     <>
       <div className={styles.breadcrumbs}>
         <div className={styles.breadcrumbs_element}>
-          <Link to='/' className={styles.back_link_top}>
-            Wróć
+          <Link className={styles.back_link_top} onClick={handleClick}>
+            &#8678; Wróć
           </Link>
         </div>
         <div className={styles.breadcrumbs_element}>
           <Link to='/' className={styles.catalog_link_top}>
             Katalog
           </Link>
-          <span className={styles.title}></span>
         </div>
+      {/*   <div className={styles.breadcrumbs_element}>
+          <span className={styles.title}>{parse(selectedComic.title)}</span>
+        </div> */}
       </div>
 
       <main className={styles.container_page}>

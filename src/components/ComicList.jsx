@@ -4,6 +4,11 @@ import styles from './ComicList.module.css';
 import parse from 'html-react-parser';
 
 const ComicList = ({ comicsData }) => {
+
+  useEffect(() => {
+    document.title = `Studio Lain`;
+  }, []);
+  
   const [soldCovers, setSoldCovers] = useState([]);
 
   useEffect(() => {

@@ -58,6 +58,7 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   background-color: var(--bright-color);
+  transition: background-color 0.2s ease-out;
 }
 
 h1 {
@@ -107,6 +108,7 @@ body.dark-mode,
 body.dark-mode div {
   background-color: var(--main-color);
   color: var(--gray-color-light);
+  transition: background-color 0.2s ease-out;
 }
 
 body.dark-mode img {
@@ -123,12 +125,10 @@ body.dark-mode ul a {
   color: #ffffff;
 }
 
-body.dark-mode a {
-  color: var(--gray-color);
-}
-
-body.dark-mode header a {
-  color: var(--gray-color);
+body.dark-mode a,
+body.dark-mode header a,
+body.dark-mode span {
+  color: var(--gray-color) !important;
 }
 
 body.dark-mode .sl-close,
@@ -154,7 +154,7 @@ body.dark-mode .search_main_cover_input {
   color: #b7b7b7;
 }
 
-body.dark-mode .breadcrumbs .title {
+body.dark-mode .breadcrumbs {
   font-weight: 500;
   color: #d7d7d7;
 }

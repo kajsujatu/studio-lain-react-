@@ -1,8 +1,8 @@
 .breadcrumbs {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   justify-content: start;
-  gap: 1.3rem;
+  gap: 0.7rem;
   max-width: 62rem;
   height: 3rem;
   line-height: 3rem;
@@ -15,10 +15,6 @@
   border-radius: 0.7rem 0.7rem 0 0;
   padding: 0 1.6rem;
   text-align: center;
-}
-
-body.dark-mode .breadcrumbs > * {
-  background-color: red;
 }
 
 .breadcrumbs_element {
@@ -118,7 +114,6 @@ h1.title {
 
 .cover_big {
   width: 433px;
-  /* height: 578px; */
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
