@@ -9,7 +9,7 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     const body = document.body;
     const html = document.documentElement;
-    /*  const root = document.querySelector(':root'); */
+    const root = document.querySelector(':root');
 
     if (isDarkMode) {
       body.classList.add('dark-mode');

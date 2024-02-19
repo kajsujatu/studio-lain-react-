@@ -13,6 +13,8 @@ const App = () => {
   const [comics, setComics] = useState([]);
   const [selectedComic, setSelectedComic] = useState(null);
 
+  
+  
   useEffect(() => {
     fetch('/comics.json')
       .then((response) => response.json())

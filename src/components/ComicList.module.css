@@ -7,18 +7,18 @@
   justify-items: center;
   margin-inline: auto;
   margin-bottom: 4.5rem;
-  /*	background-color: var(--bright-color); */
 }
 
 .cover {
   width: 237px;
   height: 327px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
-  /*	background-size: cover;
-	background-repeat: no-repeat; */
   cursor: pointer;
   filter: brightness(1);
   outline: 0;
+}
+
+.cover img {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .cover:hover {

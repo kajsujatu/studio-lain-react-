@@ -2873,8 +2873,8 @@
     },
     "filter": "seria-uniwersum-dredda-lawless",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl"
     },
@@ -5173,13 +5173,13 @@
     },
     "details": {
       "format": "210x297 mm",
-      "pages": "-",
+      "pages": 236,
       "print": "czarno-biały",
       "paper": "kredowy",
       "typeOfBookCover": "twarda",
       "date": "1 luty 2024",
       "edition": "I",
-      "ISBN": "-",
+      "ISBN": "978-83-968925-2-2",
       "price": "105,00 zł"
     },
     "detailsOriginalEdition": {
@@ -5200,19 +5200,23 @@
       }
     },
     "filter": "seria-uniwersum-dredda-lawless",
-    "new": false,
+    "new": true,
     "availability": true,
     "lastItems": false,
-    "preview": true,
+    "preview": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
-      "buyShop3": "gildia.pl (okładka B)"
+      "buyShop3": "gildia.pl (okładka B)",
+      "buyShop4": "komiksiarnia.pl",
+      "buyShop5": "robmydobrze.pl"
     },
     "buyLinks": {
       "buyLink1": "https://www.gildia.pl/komiksy/589961-bezprawie-2",
       "buyLink2": "https://www.gildia.pl/komiksy/589962-bezprawie-2-okladka-limitowana-a",
-      "buyLink3": "https://www.gildia.pl/komiksy/589963-bezprawie-2-okladka-limitowana-b"
+      "buyLink3": "https://www.gildia.pl/komiksy/589963-bezprawie-2-okladka-limitowana-b",
+      "buyLink4": "https://komiksiarnia.pl/bezprawie/17764-bezprawie-tom-2-.html",
+      "buyLink5": "https://robmydobrze.pl/produkt/bezprawie-2/"
     },
     "url": "bezprawie-tom-2"
   },
@@ -5224,7 +5228,7 @@
     "art": "Emmanuel Civiello",
     "translator": "-",
     "proofreader": "-",
-    "description": "<p><b> Wspaniale zilustrowane dark fantasy dla dorosłych. </b>",
+    "description": "<p> Średniowiecze. Chrześcijaństwo wypiera inne wierzenia. W efekcie magiczny świat Faerie umiera, nawiedzany przez demoniczne siły. Aby go ocalić, Królowa Wróżek powierza Iggukowi Plitchwookowi tajną misję. Ten mały kronikarz historii Elfów i alchemik ma odnaleźć Kryształowe Serce. Ruszając w podróż, nie zdaje sobie jednak sprawy, że jest częścią znacznie większej gry...</p><p> Poznaj niezwykłą interpretację legend związanych ze światem Avalonu i króla Artura. Merlin i Oberon toczą na szachownicy losu zaciętą bitwę o duszę i pamięć. Czy to jednak na pewno pojedynek dobra ze złem?</p><p> Za ten przepięknie ręcznie namalowany komiks odpowiada <i>Emmanuel Civiello</i>, znany polskiemu czytelnikowi z hitowej serii <b>Korriganie</b>. To właśnie tym tytułem wdarł się do czołówki francuskich artystów komiksowych.</p> Album stanowi kompletną, zamkniętą historię. Liczy 196 stron</p>",
     "img": {
       "coverMainSiteDesktop": "img/komiks/ziarno-szalenstwa/ziarno-szalenstwa_okladka-desktop.jpg",
       "coverMainSiteMobile": "img/komiks/ziarno-szalenstwa/ziarno-szalenstwa_okladka-mobile.jpg",
@@ -5286,14 +5290,14 @@
     },
     "details": {
       "format": "210x295 mm",
-      "pages": "-",
+      "pages": 196,
       "print": "kolorowy",
       "paper": "kredowy",
       "typeOfBookCover": "twarda",
       "date": "luty 2024",
       "edition": "I",
-      "ISBN": "-",
-      "price": "-"
+      "ISBN": "978-83-968925-3-9",
+      "price": "130,00 zł"
     },
     "detailsOriginalEdition": {
       "title": "La graine de folie",
@@ -5314,14 +5318,22 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": false,
+    "availability": true,
     "lastItems": false,
     "preview": true,
     "buyShops": {
-      "buyShop1": "gildia.pl"
+      "buyShop1": "gildia.pl",
+      "buyShop2": "gildia.pl (okładka A)",
+      "buyShop3": "gildia.pl (okładka B)",
+      "buyShop4": "komiksiarnia.pl",
+      "buyShop5": "robmydobrze.pl"
     },
     "buyLinks": {
-      "buyLink1": "https://www.gildia.pl/komiksy/495491-korriganie"
+      "buyLink1": "https://www.gildia.pl/komiksy/591917-ziarno-szalenstwa",
+      "buyLink2": "https://www.gildia.pl/komiksy/591918-ziarno-szalenstwa-okladka-limitowana-a",
+      "buyLink3": "https://www.gildia.pl/komiksy/591919-ziarno-szalenstwa-okladka-limitowana-b",
+      "buyLink4": "https://komiksiarnia.pl/studio-lain/17772-ziarno-szalenstwa-9788396892539.html",
+      "buyLink5": "https://robmydobrze.pl/produkt/ziarno-szalenstwa/"
     },
     "url": "ziarno-szalenstwa"
   }

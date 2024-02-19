@@ -44,15 +44,12 @@
 
 .comics_preview {
   display: flex;
+  width: 60rem;
   column-gap: 2rem;
   margin-top: 1.2rem;
   border: 4px solid #dcdcdc;
   padding: 1rem;
   background-color: var(--bright-color-100);
-}
-
-.comics_preview_img {
-  flex: 1;
 }
 
 .comics_preview_img img {

@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: var(--main-color);
   background-color: #242424;
 
   --main-color: #202020;
@@ -33,21 +33,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a,
-a:hover,
-a:link {
-  color: var(--main-color);
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--main-color);
-}
-
-:focus {
-  outline: 1px solid var(--gray-color);
-}
-
 body {
   margin: 0;
   display: flex;
@@ -59,6 +44,19 @@ body {
   align-items: stretch;
   background-color: var(--bright-color);
   transition: background-color 0.2s ease-out;
+}
+
+a,
+a:hover,
+a:visited,
+a:link,
+label {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+:focus {
+  outline: 1px solid var(--gray-color);
 }
 
 h1 {
@@ -77,24 +75,44 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: var(--gray-color);
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--main-color);
-    background-color: var(--gray-color);
+@media (prefers-color-scheme: dark) {
+  body,
+  div {
+    background-color: var(--main-color);
+    color: var(--gray-color-light);
   }
-  a:hover {
+
+  img {
+    filter: brightness(0.95);
+  }
+
+  a,
+  a:hover,
+  a:visited,
+  a:link {
     color: var(--gray-color);
   }
+
+  label {
+    color: var(--gray-color-light);
+  }
+
   button {
     background-color: var(--gray-color);
+  }
+
+  body .cover {
+    box-shadow: none !important;
   }
 }
 
@@ -113,6 +131,11 @@ body.dark-mode div {
 
 body.dark-mode img {
   filter: brightness(0.95);
+  box-shadow: none !important;
+}
+
+body.dark-mode .cover {
+  box-shadow: none !important;
 }
 
 body.dark-mode select,
@@ -123,6 +146,10 @@ body.dark-mode input {
 
 body.dark-mode ul a {
   color: #ffffff;
+}
+
+body.dark-mode label {
+  color: var(--gray-color-light);
 }
 
 body.dark-mode a,
