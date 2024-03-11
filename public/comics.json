@@ -288,8 +288,8 @@
     },
     "filter": "seria-stickleback",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl"
     },
@@ -3580,6 +3580,7 @@
     "filter": "seria-slaine",
     "new": false,
     "availability": true,
+    "lastItems": true,
     "buyShops": {
       "buyShop1": "gildia.pl (B)"
     },
@@ -4761,7 +4762,7 @@
     "filter": "antologie-integrale",
     "new": false,
     "availability": true,
-    "lastItems": false,
+    "lastItems": true,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
@@ -5062,7 +5063,7 @@
     "filter": "seria-slaine",
     "new": true,
     "availability": true,
-    "lastItems": false,
+    "lastItems": true,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
@@ -5224,10 +5225,10 @@
   {
     "id": 64,
     "title": "Ziarno Szaleństwa",
-    "writer": "Thomas Mosdi",
+    "writer": "Emmanuel Civiello, <br> Thomas Mosdi",
     "art": "Emmanuel Civiello",
-    "translator": "-",
-    "proofreader": "-",
+    "translator": "Jacek Bartecki",
+    "proofreader": "Agata Bogusławska",
     "description": "<p> Średniowiecze. Chrześcijaństwo wypiera inne wierzenia. W efekcie magiczny świat Faerie umiera, nawiedzany przez demoniczne siły. Aby go ocalić, Królowa Wróżek powierza Iggukowi Plitchwookowi tajną misję. Ten mały kronikarz historii Elfów i alchemik ma odnaleźć Kryształowe Serce. Ruszając w podróż, nie zdaje sobie jednak sprawy, że jest częścią znacznie większej gry...</p><p> Poznaj niezwykłą interpretację legend związanych ze światem Avalonu i króla Artura. Merlin i Oberon toczą na szachownicy losu zaciętą bitwę o duszę i pamięć. Czy to jednak na pewno pojedynek dobra ze złem?</p><p> Za ten przepięknie ręcznie namalowany komiks odpowiada <i>Emmanuel Civiello</i>, znany polskiemu czytelnikowi z hitowej serii <b>Korriganie</b>. To właśnie tym tytułem wdarł się do czołówki francuskich artystów komiksowych.</p> Album stanowi kompletną, zamkniętą historię. Liczy 196 stron</p>",
     "img": {
       "coverMainSiteDesktop": "img/komiks/ziarno-szalenstwa/ziarno-szalenstwa_okladka-desktop.jpg",
@@ -5294,7 +5295,7 @@
       "print": "kolorowy",
       "paper": "kredowy",
       "typeOfBookCover": "twarda",
-      "date": "luty 2024",
+      "date": "20 lutego 2024",
       "edition": "I",
       "ISBN": "978-83-968925-3-9",
       "price": "130,00 zł"
@@ -5302,7 +5303,7 @@
     "detailsOriginalEdition": {
       "title": "La graine de folie",
       "publisher": "Delcourt",
-      "date": "2003"
+      "date": "1996-2002"
     },
     "review": {
       "reviewLinks": {},
@@ -5317,10 +5318,10 @@
       }
     },
     "filter": "antologie-integrale",
-    "new": false,
+    "new": true,
     "availability": true,
     "lastItems": false,
-    "preview": true,
+    "preview": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
@@ -5336,5 +5337,110 @@
       "buyLink5": "https://robmydobrze.pl/produkt/ziarno-szalenstwa/"
     },
     "url": "ziarno-szalenstwa"
+  },
+
+  {
+    "id": 65,
+    "title": "Acriborea",
+    "writer": "Sylvain Cordurié",
+    "art": "Stéphane Créty",
+    "translator": "",
+    "proofreader": "",
+    "description": "<p>Dla fanów <i>Armady</i>, <i>Orbital</i>, <i>Wiecznej Wojny</i> i <i>Universal War One</i> oraz <i>Universal War Two</i>.</p> <p><b><i>Acriborea</i> to jeden z komiksowych przebojów na rynku francuskim.</b> Ta militarna space opera zachwyciła zarówno czytelników i krytyków. To wybuchowa mieszanka akcji, science-fiction i spisków z poważnym dyskursem politycznym i społecznym. Okrucieństwo wojny, kolonializm, eksterminacja – to tematy, które podejmują autorzy, a które w dzisiejszym świecie nabierają jeszcze mocniejszego wydźwięku.</p> <p>Rok 2465. Ziemia od wieków nie nadaje się już do życia. Trwa exodus rasy ludzkiej. Aby zapewnić sobie przetrwanie zakłada ona kolonię w odległym systemie Ruivivar. Po pół wieku przygotowań nadchodzi czas przybycia nowej fali migrantów - dwunastu milionów ludzi. Koloniści mają zasiedlić planetę Acriborea. To wielkie wydarzenie skupia na sobie uwagę wszystkich… łącznie z rodowitymi mieszkańcami Ruivivaru. Rozpoczyna się walka o przetrwanie gatunku ludzkiego. Wiele będzie tu zależeć od losów dwójki mężczyzn – Jaspera Niemeyera i Nathana Palligera.</p> <p>Album zawiera kompletną i zamkniętą historię. Zbiera w jeden pięć oryginalnych tomów.</p>",
+    "img": {
+      "coverMainSiteDesktop": "img/komiks/acriborea/acriborea_okladka-desktop.jpg",
+      "coverMainSiteMobile": "img/komiks/acriborea/acriborea_okladka-mobile.jpg",
+      "coverImgAlt": "okładka komiksu Acriborea",
+      "coverBasic": "../img/komiks/acriborea/acriborea_okladka-podstawowa-big.jpg",
+      "coverBasicThumbnail": "../img/komiks/acriborea/acriborea_okladka-podstawowa-thumbnail.jpg",
+      "coverBasicOriginal": "../img/komiks/acriborea/acriborea_okladka-podstawowa.jpg",
+      "coverAlternative1": "../img/komiks/acriborea/acriborea_okladka-limitowana-a-big.jpg",
+      "coverAlternative1Thumbnail": "../img/komiks/acriborea/acriborea_okladka-limitowana-a-thumbnail.jpg",
+      "coverAlternative1Original": "../img/komiks/acriborea/acriborea_okladka-limitowana-a.jpg",
+      "coverAlternative2": "../img/komiks/acriborea/acriborea_okladka-limitowana-b-big.jpg",
+      "coverAlternative2Thumbnail": "../img/komiks/acriborea/acriborea_okladka-limitowana-b-thumbnail.jpg",
+      "coverAlternative2Original": "../img/komiks/acriborea/acriborea_okladka-limitowana-b.jpg",
+      "insidePanels": {
+        "inside1": "../img/komiks/acriborea/acriborea_str-1.jpeg",
+        "inside2": "../img/komiks/acriborea/acriborea_str-2.jpeg",
+        "inside3": "../img/komiks/acriborea/acriborea_str-3.jpeg",
+        "inside4": "../img/komiks/acriborea/acriborea_str-4.jpeg",
+        "inside5": "../img/komiks/acriborea/acriborea_str-5.jpeg",
+        "inside6": "../img/komiks/acriborea/acriborea_str-6.jpeg",
+        "inside7": "../img/komiks/acriborea/acriborea_str-7.jpeg",
+        "inside8": "../img/komiks/acriborea/acriborea_str-8.jpeg",
+        "inside9": "../img/komiks/acriborea/acriborea_str-9.jpeg",
+        "inside10": "../img/komiks/acriborea/acriborea_str-10.jpeg"
+      },
+      "insidePanelsThumbnails": {
+        "inside1Thumbnail": "../img/komiks/acriborea/acriborea_str-1-thumbnail.jpg",
+        "inside2Thumbnail": "../img/komiks/acriborea/acriborea_str-2-thumbnail.jpg",
+        "inside3Thumbnail": "../img/komiks/acriborea/acriborea_str-3-thumbnail.jpg",
+        "inside4Thumbnail": "../img/komiks/acriborea/acriborea_str-4-thumbnail.jpg",
+        "inside5Thumbnail": "../img/komiks/acriborea/acriborea_str-5-thumbnail.jpg",
+        "inside6Thumbnail": "../img/komiks/acriborea/acriborea_str-6-thumbnail.jpg",
+        "inside7Thumbnail": "../img/komiks/acriborea/acriborea_str-7-thumbnail.jpg",
+        "inside8Thumbnail": "../img/komiks/acriborea/acriborea_str-8-thumbnail.jpg",
+        "inside9Thumbnail": "../img/komiks/acriborea/acriborea_str-9-thumbnail.jpg",
+        "inside10Thumbnail": "../img/komiks/acriborea/acriborea_str-10-thumbnail.jpg"
+      },
+      "insidePanelsAlt": {
+        "inside1Alt": "przykładowa plansza komiksu Acriborea - 1",
+        "inside2Alt": "przykładowa plansza komiksu Acriborea - 2",
+        "inside3Alt": "przykładowa plansza komiksu Acriborea - 3",
+        "inside4Alt": "przykładowa plansza komiksu Acriborea - 4",
+        "inside5Alt": "przykładowa plansza komiksu Acriborea - 5",
+        "inside6Alt": "przykładowa plansza komiksu Acriborea - 6",
+        "inside7Alt": "przykładowa plansza komiksu Acriborea - 7",
+        "inside8Alt": "przykładowa plansza komiksu Acriborea - 8",
+        "inside9Alt": "przykładowa plansza komiksu Acriborea - 9",
+        "inside10Alt": "przykładowa plansza komiksu Acriborea - 10"
+      }
+    },
+    "details": {
+      "format": "210x295 mm",
+      "pages": 256,
+      "print": "kolorowy",
+      "paper": "kredowy",
+      "typeOfBookCover": "twarda",
+      "date": "29 marca 2024",
+      "edition": "I",
+      "ISBN": "",
+      "price": "139,00 zł"
+    },
+    "detailsOriginalEdition": {
+      "title": "Acriboréa",
+      "publisher": "Delcourt",
+      "date": "2006-2008"
+    },
+    "review": {
+      "reviewLinks": {},
+      "reviewTitles": {}
+    },
+    "relatedComics": {
+      "relatedComicsLinks": {
+
+      },
+      "relatedComicsImg": {
+
+      }
+    },
+    "filter": "antologie-integrale",
+    "new": false,
+    "availability": true,
+    "lastItems": false,
+    "preview": true,
+    "buyShops": {
+      "buyShop1": "gildia.pl",
+      "buyShop2": "gildia.pl (okładka A)",
+      "buyShop3": "gildia.pl (okładka B)"
+    },
+    "buyLinks": {
+      "buyLink1": "https://www.gildia.pl/komiksy/595650-acriborea",
+      "buyLink2": "https://www.gildia.pl/komiksy/595648-acriborea-okladka-limitowana-a",
+      "buyLink3": "https://www.gildia.pl/komiksy/595649-acriborea-okladka-limitowana-b"
+    },
+    "url": "acriborea"
   }
+
 ]

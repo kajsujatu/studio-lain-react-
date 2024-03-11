@@ -247,12 +247,13 @@ h1.title {
 }
 
 .buy {
-  width: 11.3rem;
-  height: 3.7rem;
+  width: 14.5rem;
+  height: 4.3rem;
   background-color: #19a538;
   border-radius: 10px;
   border: 0;
   font-size: 1.3rem;
+  line-height: 1.6rem;
   color: var(--white-color);
   font-weight: 500;
   cursor: pointer;
@@ -268,7 +269,7 @@ h1.title {
 .buy_links {
   display: none;
   margin-top: -10px;
-  width: 11.3rem;
+  width: 14.5rem;
   height: auto;
   list-style: none;
   padding-inline-start: 0;
@@ -289,7 +290,7 @@ h1.title {
   content: '';
   margin-top: -10px;
   background-color: #19a538;
-  width: 11.3rem;
+  width: 14.5rem;
   height: 0.6rem;
   position: relative;
 }

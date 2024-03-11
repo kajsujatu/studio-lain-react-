@@ -40,6 +40,18 @@ const WhereToBuy = () => {
           <p></p>
 
           <p className={styles.shop}>
+            <b>Róbmy Dobrze</b>
+          </p>
+          <p>
+            <a
+              href='https://robmydobrze.pl/wydawnictwo/studio-lain/'
+              target='_blank'
+            >
+              robmydobrze.pl
+            </a>
+          </p>
+
+          <p className={styles.shop}>
             <b>Komikslandia</b>
           </p>
           <p>
@@ -79,11 +91,6 @@ const WhereToBuy = () => {
             </a>
           </p>
           <p>ul. Stefana Batorego 2, Kraków</p>
-
-          <p className={styles.shop}>
-            <b>Fantastyczne Światy</b>
-          </p>
-          <p>al. J. Piłsudskiego 11/3 lokal 01, Białystok</p>
         </div>
 
         <div className={styles.contact}>

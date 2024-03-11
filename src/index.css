@@ -145,7 +145,7 @@ body.dark-mode input {
 }
 
 body.dark-mode ul a {
-  color: #ffffff;
+  color: var(--white-color) !important;
 }
 
 body.dark-mode label {

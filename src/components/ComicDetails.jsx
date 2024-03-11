@@ -186,7 +186,7 @@ const ComicDetails = ({ comicsData }) => {
             selectedComic.availability === true && (
               <div className={styles.buy_element}>
                 <button className={styles.buy} onClick={handleBuyClick}>
-                  KUPUJĘ
+                  TU KUPISZ ONLINE
                 </button>
 
                 <ul

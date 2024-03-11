@@ -20,35 +20,6 @@ const Previews = () => {
             <b> Podsumowanie mijającego roku i zapowiedzi na 2024 r.</b>
           </a>
         </p>
-        <div className={styles.comics_preview}>
-          <div className={styles.comics_preview_img}>
-            <img src='./img/zapowiedzi/acriborea.webp'></img>
-          </div>
-          <div>
-            <h1 className={styles.title}>Acriborea</h1>
-            <ul className={`${styles.comics_data} ${styles.main_info}`}>
-              <li>Tytył oryginalny</li>
-              <li>Acriboréa</li>
-              <li>Scenariusz</li>
-              <li>Sylvain Cordurié</li>
-              <li>Ilustracje</li>
-              <li>Stéphane Créty</li>
-            </ul>
-
-            <p>
-              Przewidywana data polskiego wydania: <b>marzec 2024</b>
-            </p>
-            <p>
-              Więcej informacji na temat zagranicznego wydania:{' '}
-              <a
-                href='https://www.bedetheque.com/serie-13233-BD-Acriborea.html'
-                target='_blank'
-              >
-                <b> Link BD</b>
-              </a>
-            </p>
-          </div>
-        </div>
 
         <div className={styles.comics_preview}>
           <div className={styles.comics_preview_img}>
