@@ -18,6 +18,8 @@ const Navigation = ({ comicsData }) => {
 
   const toggleNavbarLinks = () => {
     setNavbarLinksVisible(!navbarLinksVisible);
+    const toggleButton = document.querySelector(`.${styles.toggle_button}`);
+    toggleButton.classList.toggle(`${styles.active}`);
   };
 
   const toggleSearchBar = () => {
@@ -77,16 +79,11 @@ const Navigation = ({ comicsData }) => {
   return (
     <header>
       <nav className={styles.navbar}>
-        <NavLink
-          to='/'
-          className={({ isActive }) => (isActive ? styles.active : undefined)}
-        >
-          <img
-            className={styles.logo}
-            src='../img/studio-lain_logo.png'
-            alt='Studio Lain'
-          />
-        </NavLink>
+        <img
+          className={styles.logo}
+          src='../img/studio-lain_logo.png'
+          alt='logo Studio Lain'
+        />
         <ul
           aria-label='Primary'
           className={`${styles.navbar_links} ${

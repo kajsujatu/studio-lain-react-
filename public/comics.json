@@ -2228,7 +2228,7 @@
     },
     "detailsOriginalEdition": {
       "title": "Épopées fantastiques",
-      "publisher": "Les Humanoides Associés",
+      "publisher": "Les Humanoïdes Associés",
       "date": "2002 (1977-1988)"
     },
     "review": {
@@ -4141,10 +4141,10 @@
   {
     "id": 54,
     "title": "Zaklinacze Opali",
-    "writer": "Éric Corbeyran<br> Nicolas Hamm",
+    "writer": "Éric Corbeyran,<br> Nicolas Hamm",
     "art": "Grun",
-    "translator": "-",
-    "proofreader": "-",
+    "translator": "Krikon Konopacki",
+    "proofreader": "Izabela Rutkowska, <br>Mała Kasia",
     "description": "<p><b>Pięknie zilustrowana przez <i>Gruna</i> (<i>Metronom</i>, <i>On Mars</i>) historia przygodowa rozgrywająca się w XVI i XVII wieku.</b> Rysownik zadbał o mnóstwo detali oddające ducha epoki – od spektakularnej architektury czy barwnych strojów poprzez broń białą i palną do wielkich okrętów. Dzięki <i>Grunowi</i> historia o tajemnicach Nostradamusa dosłownie ożywa na kartach komiksu.</p><p> Za scenariusz odpowiadają <i>Éric Corbeyran</i> i <i>Nicolas Hamm</i>. Do historycznej opowieści przygodowej spod szyldu płaszcza i szpady z powodzeniem wpletli elementy fantastyczne oraz mity narosłe wokół postaci samozwańczego wieszcza.</p><p> Kapitan pirackiego okrętu Walaya du Martray, tajemniczy doradca kardynała Richelieu Joachim Pratentis oraz szwedzki najemnik Éric Gustavson – co łączy tych nieznajomych? Jaką rolę odegrają podczas oblężenia La Rochelle, bastionu protestantów opierającego się atakom wojsk samego króla Francji?</p><p> Nostradamus przekazał trzy magiczne opale, które wpłyną na przyszłość ludzkości, trzem marynarzom. Tym samym umieścił losy rasy ludzkiej w rękach ich potomków, czy tego chcą czy nie. Na ich drodze jednak staną siły, którym nie jest w smak utrata władzy nad ludzkim stadem...</p><p> Wydanie zbiera cztery oryginalne albumy i stanowi zamknięta historię.</p>",
     "img": {
       "coverMainSiteDesktop": "img/komiks/zaklinacze-opali/zaklinacze-opali_okladka-desktop.jpg",
@@ -4187,9 +4187,9 @@
       "price": "130,00 zł"
     },
     "detailsOriginalEdition": {
-      "title": "",
-      "publisher": "",
-      "date": ""
+      "title": "La Conjuration d'Opale",
+      "publisher": "Dargaud Benelux",
+      "date": "2010"
     },
     "review": {
       "reviewLinks": {},
@@ -4900,8 +4900,8 @@
     "title": "Thorinth",
     "writer": "Nicolas Fructus",
     "art": "Nicolas Fructus",
-    "translator": "-",
-    "proofreader": "-",
+    "translator": "Jacek Bartecki",
+    "proofreader": "Agata Bogusławska, <br>Jarosław Ejsymont",
     "description": "<p>Komiks z kultowego wydawnictwa <i>Les Humanoïdes Associés</i>, które stworzyło magazyn <i>Metal Hurlant</i> i które publikowało dzieła gwiazd komiksu europejskiego jak <i>Moebius</i>, <i>Jodorowsky</i>, <i>Caza</i>, <i>Drulliet</i>. Lista jest długa. Ich katalog to pozycje niezwykłe i nietuzinkowe. Do takich należy też <i>Thorinth</i>, w pełni autorska praca <i>Nicolasa Fructusa</i>. W pięknym malarskim stylu stworzył unikalne uniwersum, zachwycając zarówno czytelników, jak i krytyków. To twórca znany już polskiemu czytelnikowi ze współpracy ze światową ikoną komiksu <i>Alexandro Jodorowskym</i> (<i>Showman Killer</i>).</p><p>Wieża Thorinth to olbrzymi zakład psychiatryczny. Miał służyć poznaniu tajemnic ludzkiego umysłu i przywracać pacjentom wewnętrzną harmonię. Architektka tego obiektu nie zamierzała go jednak oddawać w ręce lekarskiej kasty. Podstępem unicestwiła wszystkich, tworząc przy okazji nowe byty oraz potężnego i bezlitosnego strażnika. Od tamtej pory do wieży można wejść, ale nie da się z niej wyjść.</p><p>Vei-Din decyduje się dostać do Thorinth, kiedy trafia tam jego żona. Kobieta została skazana na pobyt w wieży po tym, jak przeprowadziła fatalny w skutkach eksperyment. Jej mąż uważa jednak, że została skazana niesłusznie, i zamierza ją stamtąd wydostać. Problem w tym, że świat Thorinth od wieków żyje własnym życiem. Powstały tam królestwa walczące o wpływy i miasta rządzące się własnymi prawami. Sytuację zaogniają ataki członków sekty samobójców. A to tylko wierzchołek tej niezwykłej wieży… Witaj w świecie, gdzie normalność jest chorobą.</p><p>Prawie 300 stron niezwykłej podróży. Album zawiera kompletną, zamkniętą historię.</p>",
     "img": {
       "coverMainSiteDesktop": "img/komiks/thorinth/thorinth_okladka-desktop.jpg",
@@ -4948,9 +4948,9 @@
       "price": "149,00 zł"
     },
     "detailsOriginalEdition": {
-      "title": "",
-      "publisher": "",
-      "date": ""
+      "title": "Thorinth",
+      "publisher": "Les Humanoïdes Associés",
+      "date": "2001-2012"
     },
     "review": {
       "reviewLinks": {},
@@ -4961,7 +4961,7 @@
       "relatedComicsImg": {}
     },
     "filter": "antologie-integrale",
-    "new": true,
+    "new": false,
     "availability": true,
     "lastItems": false,
     "buyShops": {
@@ -5061,9 +5061,9 @@
       }
     },
     "filter": "seria-slaine",
-    "new": true,
-    "availability": true,
-    "lastItems": true,
+    "new": false,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
@@ -5084,8 +5084,8 @@
     "title": "Bezprawie: Tom 2",
     "writer": "Dan Abnett",
     "art": "Phil Winslade",
-    "translator": "-",
-    "proofreader": "-",
+    "translator": "Mateusz Jankowski",
+    "proofreader": "Agata Bogusławska, <br>Mała Kasia",
     "description": "<p>NIECNE PLANY MUNCE INC. ZOSTAŁY WPRAWDZIE CHWILOWO POKRZYŻOWANE, ALE CO CZEKA BADROCK TERAZ? Kolonialna szeryf Metta Lawson odkryła prawdziwe zamiary Munce, a to oznacza, że bezwzględna hiperkorporacja uzna teraz Badrock za inwestycję, od której szybko trzeba się odciąć… i dołoży wszelkich starań, by po cichu zetrzeć miasto wraz z jego mieszkańcami z powierzchni planety!</p><p> Niestety wspomniani mieszkańcy to krnąbrni i zadziorni Mutanci, Mekowie, Ludzie i Wzniesieńcy, których raz na zawsze skreślono z listy płac Munce Inc. Nie będzie łatwo skłonić ich do współpracy, nawet jeśli stawką jest przetrwanie! Metta ma jednak u swego boku strażników pokoju – zastęp indywidualistów i odmieńców. Czy z ich pomocą uda jej się sprawić, że miejscowi zapomną o dzielących ich różnicach i staną ramię w ramię przeciwko korporacyjnej poczwarze, zanim stracą o wiele więcej niż pracę…?</p>",
     "img": {
       "coverMainSiteDesktop": "img/komiks/seria-uniwersum-dredda/bezprawie-tom-2_okladka-desktop.jpg",
@@ -5186,7 +5186,7 @@
     "detailsOriginalEdition": {
       "title": "Lawless: Long Range War / Lawless: Ashes to Ashes",
       "publisher": "2000 AD (Rebellion)",
-      "date": "-"
+      "date": "2017 & 2018 & 2019, 2021 & 2023"
     },
     "review": {
       "reviewLinks": {},
@@ -5433,12 +5433,14 @@
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
-      "buyShop3": "gildia.pl (okładka B)"
+      "buyShop3": "gildia.pl (okładka B)",
+      "buyShop4": "komiksiarnia.pl"
     },
     "buyLinks": {
       "buyLink1": "https://www.gildia.pl/komiksy/595650-acriborea",
       "buyLink2": "https://www.gildia.pl/komiksy/595648-acriborea-okladka-limitowana-a",
-      "buyLink3": "https://www.gildia.pl/komiksy/595649-acriborea-okladka-limitowana-b"
+      "buyLink3": "https://www.gildia.pl/komiksy/595649-acriborea-okladka-limitowana-b",
+      "buyLink4": "https://komiksiarnia.pl/studio-lain/18014-acriborea.html"     
     },
     "url": "acriborea"
   }
