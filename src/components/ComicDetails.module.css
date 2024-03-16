@@ -30,19 +30,6 @@
   cursor: pointer;
 }
 
-.container_page {
-  max-width: 65.5rem;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 auto 1.8rem auto;
-  padding: 28px;
-  /*	background-color: var(--bright-color-100); */
-  border: 17px solid var(--main-color);
-  border-radius: 10px;
-}
-
 .container_covers {
   order: 1;
   height: 800px;
@@ -252,18 +239,33 @@ h1.title {
   background-color: #19a538;
   border-radius: 10px;
   border: 0;
+  font-family: inherit;
   font-size: 1.3rem;
+  font-weight: 500;
   line-height: 1.6rem;
   color: var(--white-color);
-  font-weight: 500;
   cursor: pointer;
   margin-bottom: 10px;
+  transition: background-color 0.25s;
+}
+
+.buy:hover {
+  background-color: #15862e;
+}
+
+.buy:focus,
+.buy:focus-visible {
+  outline: 0.1rem solid var(--white-color);
 }
 
 .buy::before {
   position: relative;
   top: 3px;
   right: 12px;
+}
+
+.buy:hover ~ .buy_links::before {
+  background-color: #15862e;
 }
 
 .buy_links {
@@ -281,10 +283,6 @@ h1.title {
   z-index: 99;
 }
 
-.buy_links_on {
-  display: grid;
-}
-
 .buy_links::before {
   display: block;
   content: '';
@@ -293,6 +291,11 @@ h1.title {
   width: 14.5rem;
   height: 0.6rem;
   position: relative;
+  transition: background-color 0.25s;
+}
+
+.buy_links_on {
+  display: grid;
 }
 
 .buy_link {
@@ -379,6 +382,14 @@ h1.title {
   cursor: none;
 }
 
+@media (max-width: 55rem) {
+  /* 880px */
+
+  .description {
+    padding-inline: 0.5rem;
+  }
+}
+
 @media (max-width: 33.313rem) {
   /* 533px */
 
@@ -417,10 +428,9 @@ h1.title {
   }
 
   .breadcrumbs {
-    grid-template-columns: none;
     grid-template-rows: auto auto;
     justify-content: center;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     gap: 0.5rem;
   }
 

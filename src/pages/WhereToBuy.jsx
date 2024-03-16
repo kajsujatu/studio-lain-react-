@@ -11,7 +11,7 @@ const WhereToBuy = () => {
     <>
       <Breadcrumbs />
 
-      <main className={styles.container_page}>
+      <main className='container_page'>
         <div className={styles.contact}>
           <p>
             <b>Nasze komiksy kupicie w sklepach:</b>

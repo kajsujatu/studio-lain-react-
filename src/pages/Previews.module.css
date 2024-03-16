@@ -121,7 +121,7 @@ h2.title {
 
 @media (max-width: 33.313rem) {
   /* 533px */
-  .container_page {
+  :global(.container_page) {
     padding: 0;
     border: 7px solid var(--main-color);
     border-radius: 5px;

@@ -39,7 +39,7 @@ const ComicDetails = ({ comicsData }) => {
   }, [selectedComic]);
 
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, [selectedComicCover]);
 
   const handleThumbnailClick = (thumbnail) => {
@@ -76,7 +76,7 @@ const ComicDetails = ({ comicsData }) => {
       <div className={styles.breadcrumbs}>
         <div className={styles.breadcrumbs_element}>
           <Link className={styles.back_link_top} onClick={handleClick}>
-            &#8678; Wróć
+            Wróć
           </Link>
         </div>
         <div className={styles.breadcrumbs_element}>
@@ -89,7 +89,7 @@ const ComicDetails = ({ comicsData }) => {
         </div> */}
       </div>
 
-      <main className={styles.container_page}>
+      <main className='container_page'>
         <div className={styles.container_covers}>
           <img src={selectedCover} alt='' className={styles.cover_big} />
 

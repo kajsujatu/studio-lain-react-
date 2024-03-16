@@ -10,10 +10,8 @@ const Previews = () => {
     <>
       <Breadcrumbs />
 
-      <main className={styles.container_page}>
-        <h2 className={styles.title}>
-          Nasze plany wydawnicze
-        </h2>
+      <main className='container_page'>
+        <h2 className='title'>Nasze plany wydawnicze</h2>
         <p className={styles.text_introduce}>
           <a
             href='https://blogokomiksach.blogspot.com/2023/12/studio-lain-podsumowanie-mijajacego.html'

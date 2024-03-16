@@ -11,7 +11,7 @@ const Breadcrumbs = () => {
       <div className={styles.breadcrumbs}>
         <div className={styles.breadcrumbs_element}>
           <Link to='/' className={styles.back_link_top} onClick={handleClick}>
-          &#8678; Wróć
+            Wróć
           </Link>
         </div>
       </div>

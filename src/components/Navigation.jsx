@@ -91,7 +91,7 @@ const Navigation = ({ comicsData }) => {
           }`}
         >
           <li>
-            <NavLink
+            <NavLink onClick={toggleNavbarLinks}
               to='/plany-wydawnicze'
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
@@ -102,16 +102,16 @@ const Navigation = ({ comicsData }) => {
           </li>
           <li>
             <NavLink
-              to='/'
+              to='/' onClick={toggleNavbarLinks}
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
-              }
+              } 
             >
               katalog
             </NavLink>
           </li>
           <li>
-            <NavLink
+            <NavLink onClick={toggleNavbarLinks}
               to='/o-nas'
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
@@ -121,7 +121,7 @@ const Navigation = ({ comicsData }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink
+            <NavLink onClick={toggleNavbarLinks}
               to='/gdzie-kupic'
               className={({ isActive }) =>
                 isActive ? styles.active : undefined

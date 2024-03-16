@@ -1,7 +1,6 @@
 .breadcrumbs {
     display: grid;
-    grid-template-columns: auto auto;
-    justify-content: start;
+    justify-content: center;
     gap: 1.3rem;
     max-width: 62rem;
     height: 3rem;

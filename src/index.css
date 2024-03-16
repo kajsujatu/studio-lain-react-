@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: var(--main-color);
-  background-color: #242424;
+
 
   --main-color: #202020;
   --black-color: #121212;
@@ -47,6 +47,24 @@ body {
   transition: background-color 0.2s ease-out;
 }
 
+
+.container_page {
+  max-width: 65.5rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto 1.8rem auto;
+  padding: 28px;
+  border: 17px solid var(--main-color);
+  border-radius: 10px;
+}
+
+h2.title {
+  text-align: center;
+  width: 100%;
+}
+
 a,
 a:hover,
 a:visited,
@@ -65,7 +83,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -79,12 +97,13 @@ button {
 
 button:hover {
   border-color: var(--gray-color);
-}
+} 
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+*/
 
 @media (prefers-color-scheme: dark) {
   body,
@@ -186,6 +205,19 @@ body.dark-mode .breadcrumbs {
   font-weight: 500;
   color: #d7d7d7;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* **************** SMALL DEVICES **************** */
 
@@ -323,6 +355,13 @@ body.dark-mode .breadcrumbs {
 
 @media (max-width: 33.313rem) {
   /* 533px */
+
+
+  .container_page {
+    padding: 0;
+    border: 7px solid var(--main-color);
+    border-radius: 5px;
+  }
 
   header {
     height: 4.3rem;

@@ -10,11 +10,14 @@ const AboutUs = () => {
   return (
     <>
       <Breadcrumbs />
-
-      <main className={styles.container_page}>
+      <main className='container_page'>
+        <h2 className='title'>O nas</h2>
         <div className={styles.bio}>
-          <div className={styles.image_logo}>
-            <img src='img/studio-lain_logo-big.jpg' />
+          <div>
+            <img
+              className={styles.image_logo}
+              src='img/studio-lain_logo-big.jpg'
+            />
           </div>
           <div>
             <p>
@@ -31,8 +34,13 @@ const AboutUs = () => {
               wielkie dzięki, bo zawsze marzyliśmy o wydawaniu historii
               obrazkowych.
             </p>
+          </div>
+        </div>
+
+        <div>
+          <div className={styles.bio_item}>
             <p>
-              <b>WYWIADY:</b>
+              <b>WYWIADY</b>
             </p>
             <p>
               <a
@@ -41,8 +49,8 @@ const AboutUs = () => {
               >
                 Kolorowe Zeszyty (5 kwietnia 2016)
               </a>
-            </p>
-            <p>
+              <br />
+
               <a
                 href='https://blogokomiksach.blogspot.com/2023/12/studio-lain-podsumowanie-mijajacego.html'
                 target='_blank'
@@ -51,39 +59,35 @@ const AboutUs = () => {
               </a>
             </p>
           </div>
-        </div>
 
-        <div>
-          <div className={styles.contact}>
+          <div className={styles.bio_item}>
             <p>
-              <b>KONTAKT:</b>
+              <b>KONTAKT</b>
             </p>
             <p>
-              <b>Arkadiusz Dzierżawski</b>
-            </p>
-            <p>
+              <b>Arkadiusz Dzierżawski</b> <br />
               <a href='mailto:a.dzierzawski@magazyn-arigato.pl'>
                 a.dzierzawski@magazyn-arigato.pl
               </a>
             </p>
 
             <p>
-              <b>Jacek Więckowski</b>
-            </p>
-            <p>
+              <b>Jacek Więckowski</b> <br />
               <a href='mailto:jacek.wieckowski@magazyn-arigato.pl'>
                 jacek.wieckowski@magazyn-arigato.pl
               </a>
             </p>
           </div>
 
-          <div className={styles.contact}>
+          <div className={styles.bio_item}>
             <p>
-              <b>ADRES:</b>
+              <b>ADRES</b>
             </p>
-            <p>ul. Sobieskiego 20a/5</p>
-            <p>14-202 Iława</p>
             <p>
+              ul. Sobieskiego 20a/5
+              <br />
+              14-202 Iława
+              <br />
               <a href='tel:+48512257985'>tel. 512 257 985</a>
             </p>
           </div>
