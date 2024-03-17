@@ -42,7 +42,7 @@ header {
   display: block;
   align-items: center;
   align-content: center;
-  border-right: 1px solid #797979;
+  border-right: 1px solid var(--gray-color-dark);
 }
 
 .navbar_links a:visited {
@@ -57,6 +57,7 @@ header {
 .navbar_links a.active {
   color: var(--white-color);
 }
+
 
 .toggle_button {
   display: none;
@@ -83,7 +84,7 @@ header {
   left: 3.7rem;
   height: 40px;
   width: 1.2rem;
-  border-left: 1px solid #797979;
+  border-left: 1px solid var(--gray-color-dark);
 }
 
 .search_layout {
@@ -282,7 +283,7 @@ header {
     justify-content: space-between;
     height: 19px;
     padding: 20px;
-    border: 0.15rem solid var(--gray-color-dark);
+    border: 1px solid var(--gray-color-dark);
     border-radius: 1rem;
   }
 

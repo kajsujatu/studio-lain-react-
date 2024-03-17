@@ -33,7 +33,7 @@ const ComicDetails = ({ comicsData }) => {
   useEffect(() => {
     if (selectedComic) {
       document.title = selectedComic
-        ? `Studio Lain - ${selectedComic.title}`
+        ? `Studio Lain | ${selectedComic.title}`
         : 'Studio Lain';
     }
   }, [selectedComic]);
@@ -73,21 +73,7 @@ const ComicDetails = ({ comicsData }) => {
 
   return (
     <>
-      <div className={styles.breadcrumbs}>
-        <div className={styles.breadcrumbs_element}>
-          <Link className={styles.back_link_top} onClick={handleClick}>
-            Wróć
-          </Link>
-        </div>
-        <div className={styles.breadcrumbs_element}>
-          <Link to='/' className={styles.catalog_link_top}>
-            Katalog
-          </Link>
-        </div>
-      {/*   <div className={styles.breadcrumbs_element}>
-          <span className={styles.title}>{parse(selectedComic.title)}</span>
-        </div> */}
-      </div>
+   
 
       <main className='container_page'>
         <div className={styles.container_covers}>
@@ -180,6 +166,8 @@ const ComicDetails = ({ comicsData }) => {
             <li>{selectedComic.details.ISBN}</li>
             <li>Cena</li>
             <li>{selectedComic.details.price}</li>
+            <li>Nakład</li>
+            <li>{selectedComic.details.copies}</li>
           </ul>
 
           {selectedComic.availability &&

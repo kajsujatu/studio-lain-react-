@@ -90,16 +90,7 @@ const Navigation = ({ comicsData }) => {
             navbarLinksVisible ? styles.visible : styles.hidden
           }`}
         >
-          <li>
-            <NavLink onClick={toggleNavbarLinks}
-              to='/plany-wydawnicze'
-              className={({ isActive }) =>
-                isActive ? styles.active : undefined
-              }
-            >
-              plany
-            </NavLink>
-          </li>
+         
           <li>
             <NavLink
               to='/' onClick={toggleNavbarLinks}
@@ -108,6 +99,16 @@ const Navigation = ({ comicsData }) => {
               } 
             >
               katalog
+            </NavLink>
+          </li>
+          <li>
+            <NavLink onClick={toggleNavbarLinks}
+              to='/plany-wydawnicze'
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              plany
             </NavLink>
           </li>
           <li>

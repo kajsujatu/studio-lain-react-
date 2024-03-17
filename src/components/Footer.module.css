@@ -6,4 +6,5 @@
 	color: var(--gray-color);
 	background-color: var(--main-color);
 	align-self: end;
+	margin-top: -17px;
 }

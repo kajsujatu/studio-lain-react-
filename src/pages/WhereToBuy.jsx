@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
-import Breadcrumbs from '../components/Breadcrumbs';
 import styles from './WhereToBuy.module.css';
 
 const WhereToBuy = () => {
   useEffect(() => {
-    document.title = `Studio Lain - Gdzie kupić?`;
+    document.title = `Studio Lain | Gdzie kupić?`;
   }, []);
 
   return (
     <>
-      <Breadcrumbs />
-
       <main className='container_page'>
+      <h2 className='title'>Gdzie kupić nasze komiksy?</h2>
+        <p className={styles.text_warning}>Uwaga: Pomimo statusu <i>Wyprzedane</i> widniejącego na naszej stronie przy danym komiksie, może być on jeszcze do kupienia w niektórych sklepach. Status <i>Wyprzedane</i> na naszej stronie oznacza, że nie mamy już tej pozycji w naszym magazynie. </p> 
         <div className={styles.contact}>
           <p>
             <b>Nasze komiksy kupicie w sklepach:</b>
@@ -72,7 +71,7 @@ const WhereToBuy = () => {
               href='https://www.facebook.com/CentrumKomiksuPL/'
               target='_blank'
             >
-              www.facebook.com/CentrumKomiksuPL/
+              fb/CentrumKomiksuPL
             </a>
           </p>
           <p>Al. Niepodległości 148, Warszawa</p>
@@ -86,8 +85,8 @@ const WhereToBuy = () => {
             <b>Fankomiks</b>
           </p>
           <p>
-            <a href='http://www.fankomiks.pl' target='_blank'>
-              www.fankomiks.pl
+            <a href='https://www.facebook.com/Fankomiks' target='_blank'>
+            fb/Fankomiks
             </a>
           </p>
           <p>ul. Stefana Batorego 2, Kraków</p>

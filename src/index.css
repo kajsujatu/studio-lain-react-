@@ -54,15 +54,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 0 auto 1.8rem auto;
-  padding: 28px;
+  margin: 0.2rem auto 0 auto;
+  padding: 20px 20px 40px 20px;
   border: 17px solid var(--main-color);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 h2.title {
   text-align: center;
   width: 100%;
+  margin-block: 0;
 }
 
 a,
@@ -207,16 +208,9 @@ body.dark-mode .breadcrumbs {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+body.dark-mode a.active {
+  color: var(--white-color);
+}
 
 
 /* **************** SMALL DEVICES **************** */
@@ -224,133 +218,19 @@ body.dark-mode .breadcrumbs {
 @media (max-width: 55rem) {
   /* 880px */
 
-  .navbar {
-    grid-template-columns: auto auto;
-  }
-
-  .navbar_links {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar_links.active {
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    display: grid;
-    grid-auto-flow: row;
-    row-gap: 1rem;
-    padding-inline-start: 0;
-    padding-block-end: 1rem;
-    background-color: var(--main-color);
-    z-index: 99;
-    animation: ease-down-2 0.15s ease-out;
-  }
-
-  @keyframes ease-down-2 {
-    from {
-      height: 0;
-    }
-    to {
-      height: 14rem;
-    }
-  }
-
-  .navbar_links li {
-    text-align: center;
-  }
-
-  .navbar_links a {
-    border: 0;
-  }
-
-  .additions {
-    position: absolute;
-    top: 1.6rem;
-    right: 2rem;
-  }
-
-  .toggle_button {
-    position: absolute;
-    top: 34.5px;
-    right: calc(50% - 15px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-
-  .toggle_button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: var(--bright-color);
-    border-radius: 10px;
-  }
-
-  .description {
-    padding-block-start: 1.25rem;
-    padding-inline: 0.5rem;
-  }
+  
 }
 
 @media (max-width: 40rem) {
   /* 640px */
 
-  .customize {
-    margin-block-start: 1rem;
-    grid-template-columns: auto;
-    row-gap: 1rem;
-  }
-
-  .sort > :nth-child(odd),
-  .filters > :nth-child(odd),
-  .search_main_cover > :nth-child(odd) {
-    text-align: left;
-  }
-
-  .sort-input,
-  .filters-input,
-  .search-main-cover-input {
-    width: min(17.5rem, 24rem);
-    height: 2rem;
-    font-size: 0.9rem;
-    background-color: #d7d7d7;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+ 
 }
 
 @media (max-width: 45.625rem) {
   /* 730px */
 
-  .comics_preview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .comics_preview_img {
-    display: flex;
-    justify-content: center;
-  }
-
-  .comics_preview_img img {
-    max-width: 90%;
-    width: 300px;
-  }
-
-  .bio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image_logo {
-    display: flex;
-    justify-content: center;
-  }
+  
 }
 
 @media (max-width: 33.313rem) {
@@ -363,76 +243,11 @@ body.dark-mode .breadcrumbs {
     border-radius: 5px;
   }
 
-  header {
-    height: 4.3rem;
-  }
-
-  .logo {
-    width: 6.25rem;
-    height: auto;
-    margin-top: 0.3rem;
-  }
-
-  .toggle-button {
-    top: 1.5rem;
-  }
-
-  .additions {
-    top: 1rem;
-  }
-
-  .navbar-links.active {
-    top: 3.3rem;
-  }
-
-  .cover {
-    width: 290px;
-    height: 400px;
-  }
-
-  .cover_big,
-  .container_covers,
-  .inside_thumbnails {
-    width: 100%;
-    height: auto;
-  }
-
-  .breadcrumbs {
-    grid-template-columns: none;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    margin-top: 0.5rem;
-    gap: 0.5rem;
-  }
-
-  .container-page {
-    margin-top: 56px;
-    padding: 14px;
-  }
-
-  .related_comics_section {
-    grid-auto-flow: row;
-  }
-
-  .related_comics_section::before {
-    width: 10rem;
-  }
-
-  .sold::before,
-  .last_items::before {
-    top: 17.9rem;
-  }
+ 
 }
 
 @media (max-width: 25rem) {
   /* 400px */
 
-  .inside_panels_headline {
-    gap: 0;
-    width: 80%;
-  }
-
-  .inside_samples {
-    text-align: center;
-  }
+  
 }

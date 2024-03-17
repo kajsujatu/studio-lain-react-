@@ -14,11 +14,7 @@ const Footer = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  return (
-    <div className={styles.footer}>
-      <p>Studio Lain © {currentYear}</p>
-    </div>
-  );
+  return <div className={styles.footer}>Studio Lain © {currentYear}</div>;
 };
 
 export default Footer;

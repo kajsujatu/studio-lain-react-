@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
-import Breadcrumbs from '../components/Breadcrumbs';
 import styles from './AboutUs.module.css';
 
 const AboutUs = () => {
   useEffect(() => {
-    document.title = `Studio Lain - O nas`;
+    document.title = `Studio Lain | O nas`;
   }, []);
 
   return (
     <>
-      <Breadcrumbs />
       <main className='container_page'>
         <h2 className='title'>O nas</h2>
         <div className={styles.bio}>
