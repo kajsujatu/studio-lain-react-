@@ -275,6 +275,7 @@ const Previews = () => {
               <li>Ilustracje</li>
               <li>Marc Bati</li>
             </ul>
+            <p>Wydanie zbiorcze, kompletne (razem ok. 370 stron).</p>
             <p>
               Więcej informacji na temat zagranicznego wydania:
               <a

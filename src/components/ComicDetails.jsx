@@ -9,6 +9,9 @@ import { useTheme } from './ThemeContext';
 const ComicDetails = ({ comicsData }) => {
   const { isDarkMode, toggleTheme } = useTheme();
 
+  const [currentComicId, setCurrentComicId] = useState(1);
+
+
   const [showBuyLinks, setShowBuyLinks] = useState(false);
 
   const { url } = useParams();
@@ -71,11 +74,28 @@ const ComicDetails = ({ comicsData }) => {
     return <div>Nie znalazłem takiej strony.</div>;
   }
 
+ 
+  const handlePrevButtonClick = () => {
+    if (currentComicId > 1) {
+      setCurrentComicId(currentComicId - 1);
+    }
+  };
+
+  const previousComic = comicsData.find(comic => comic.id === currentComicId - 1);
+
   return (
     <>
-   
-
       <main className='container_page'>
+        <button onClick={handlePrevButtonClick}>PREV</button>
+        <button onClick={handlePrevButtonClick}>PREV</button>
+      {previousComic && (
+        <div>
+          <h2>{previousComic.title}</h2>
+          <p>Writer: {previousComic.writer}</p>
+          {/* Dodaj inne dane komiksu */}
+        </div>
+      )}
+        <button>NEXT</button>
         <div className={styles.container_covers}>
           <img src={selectedCover} alt='' className={styles.cover_big} />
 
