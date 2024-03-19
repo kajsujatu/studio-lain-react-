@@ -6,7 +6,6 @@
   color-scheme: light dark;
   color: var(--main-color);
 
-
   --main-color: #202020;
   --black-color: #121212;
   --white-color: #ffffff;
@@ -46,7 +45,6 @@ body {
   background-color: var(--bright-color);
   transition: background-color 0.2s ease-out;
 }
-
 
 .container_page {
   max-width: 65.5rem;
@@ -191,6 +189,10 @@ body.dark-mode .container_page {
   background-color: var(--main-color);
 }
 
+body.dark-mode .nav_page_left {
+  border-right: 30px solid var(--gray-color) !important;
+}
+
 body.dark-mode .customize {
   color: #b7b7b7;
 }
@@ -207,47 +209,43 @@ body.dark-mode .breadcrumbs {
   color: #d7d7d7;
 }
 
-
 body.dark-mode a.active {
   color: var(--white-color);
 }
-
 
 /* **************** SMALL DEVICES **************** */
 
 @media (max-width: 55rem) {
   /* 880px */
-
-  
 }
 
 @media (max-width: 40rem) {
   /* 640px */
-
- 
 }
 
 @media (max-width: 45.625rem) {
   /* 730px */
-
-  
 }
 
 @media (max-width: 33.313rem) {
   /* 533px */
 
-
   .container_page {
-    padding: 0;
+    padding: 1rem 0 2rem 0;
     border: 7px solid var(--main-color);
-    border-radius: 5px;
+    border-radius: 0;
+    margin: 0;
+    gap: 1rem;
   }
 
- 
+  h2.title {
+    margin-bottom: 0.75rem;
+  }
 }
+
+
+
 
 @media (max-width: 25rem) {
   /* 400px */
-
-  
 }
