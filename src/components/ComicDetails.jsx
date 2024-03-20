@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { useGesture } from 'react-use-gesture';
+import { useGesture, useDrag } from 'react-use-gesture';
+import { useMediaQuery } from '@react-hook/media-query';
 import styles from './ComicDetails.module.css';
 import parse from 'html-react-parser';
 import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
@@ -28,6 +29,9 @@ const ComicDetails = ({ comicsData }) => {
   const handleClick = () => navigate(-1);
 
 
+  const containerRef = useRef(null);
+  const isMobile = useMediaQuery('(max-width: 533px)');
+
   const handleSwipeLeft = () => {
     if (nextComic) {
       navigate(`/komiks/${nextComic.url}`);
@@ -39,17 +43,26 @@ const ComicDetails = ({ comicsData }) => {
       navigate(`/komiks/${prevComic.url}`);
     }
   };
-
+ 
   const bind = useGesture({
-    onDragEnd: ({ direction }) => {
-      if (direction[0] < 0) {
-        handleSwipeLeft();
-      } else if (direction[0] > 0) {
-        handleSwipeRight();
+    onDrag: ({ movement: [mx, my] }) => {
+      if (isMobile) {
+        console.log('Dragged:', mx, my);
+        // Sprawdź kierunek przesunięcia
+        if (mx > 0) {
+          // Ruch w prawo
+          handleSwipeLeft();
+        } else if (mx < 0) {
+          // Ruch w lewo
+          handleSwipeRight();
+        }
       }
     },
+    options: {
+      threshold: 15, 
+      velocity: 0.1,
+    },
   });
-  
 
 
   useEffect(() => {
@@ -79,26 +92,7 @@ const ComicDetails = ({ comicsData }) => {
     setShowBuyLinks(!showBuyLinks);
   };
 
-  // simplelightbox
-  useEffect(() => {
-    if (!selectedComic) {
-      return;
-    }
 
-    const lightbox = new SimpleLightbox('.gallery a');
-
-    lightbox.on('show.simplelightbox', function (e) {
-      console.log('Image ' + (e.index + 1) + ' shown');
-    });
-
-    return () => {
-      lightbox.destroy();
-    };
-  }, [selectedComic]);
-
-  if (!selectedComic) {
-    return <div>Nie znalazłem takiej strony.</div>;
-  }
 
   const findPreviousComic = () => {
     // Sprawdź czy bieżący URL istnieje w danych komiksów
@@ -148,19 +142,50 @@ const ComicDetails = ({ comicsData }) => {
     navigate(`/komiks/${nextComic.url}`);
   };
 
+
+  
+
+
+
+  // simplelightbox
+  useEffect(() => {
+    if (!selectedComic) {
+      return;
+    }
+
+    const lightbox = new SimpleLightbox('.gallery a');
+
+    lightbox.on('show.simplelightbox', function (e) {
+      console.log('Image ' + (e.index + 1) + ' shown');
+    });
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, [selectedComic]);
+
+  if (!selectedComic) {
+    return <div>Nie znalazłem takiej strony.</div>;
+  }
+
+  
+
   return (
     <>
-      <div {...bind()} style={{ width: '100%', height: '100%' }} className={styles.container}>
+      <div className={styles.container}>
         <div className={styles.nav_page_container}>
           {nextComic && (
             <div
               className={`${styles.nav_page} ${styles.nav_page_left}`}
               onClick={handleNavigationNext}
-              title="Przejdź do następnego komiksu"
+              title='Przejdź do następnego komiksu'
             ></div>
           )}
         </div>
-        <main className='container_page'>
+        <main className='container_page' 
+        // {...bind()} style={{ width: '100%', height: '100%' }} 
+         >
+        {isMobile && <div className={styles.blank_for_mobile_touch} /> }
           <div className={styles.container_covers}>
             <img src={selectedCover} alt='' className={styles.cover_big} />
 
@@ -390,13 +415,13 @@ const ComicDetails = ({ comicsData }) => {
             )}
         </main>
         <div className={styles.nav_page_container}>
-        {prevComic && (
-          <div
-            className={`${styles.nav_page} ${styles.nav_page_right}`}
-            onClick={handleNavigationPrev}
-            title="Przejdź do wcześniejszego komiksu"
-          ></div>
-        )}
+          {prevComic && (
+            <div
+              className={`${styles.nav_page} ${styles.nav_page_right}`}
+              onClick={handleNavigationPrev}
+              title='Przejdź do wcześniejszego komiksu'
+            ></div>
+          )}
         </div>
       </div>
     </>

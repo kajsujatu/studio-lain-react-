@@ -5,6 +5,10 @@
   gap: 0.25rem;
 }
 
+.blank_for_mobile_touch {
+  display: none;
+}
+
 .nav_page_container {
   width: 30px;
   z-index: 20;
@@ -123,7 +127,6 @@ h1.title {
 
 .covers_thumbnails {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.2rem;
 }
 
@@ -402,6 +405,13 @@ h1.title {
 @media (max-width: 33.313rem) {
   /* 533px */
 
+
+  .blank_for_mobile_touch {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
   header {
     height: 4.3rem;
   }
@@ -465,6 +475,7 @@ h1.title {
   }
 
   .description {
+    padding-block-start: 0;
     padding-inline: 0.5rem;
     margin-bottom: 0;
   }
