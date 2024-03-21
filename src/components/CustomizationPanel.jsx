@@ -5,65 +5,69 @@ import ComicList from './ComicList';
 import Select from 'react-select';
 
 
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' }
-]
+const sortOptions = [
+  { value: 'najnowsze', label: 'Najnowsze' },
+  { value: 'najstarsze', label: 'Najstarsze' },
+  { value: 'alfabetycznie-a-z', label: 'Alfabetycznie A-Z' },
+  { value: 'alfabetycznie-z-a', label: 'Alfabetycznie Z-A' },
+];
 
 
 const CustomizationPanel = ({ comicsData }) => {
+
+
+
   const [sortOption, setSortOption] = useState('najnowsze');
   const [filterOption, setFilterOption] = useState('wszystkie');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredComics, setFilteredComics] = useState([]);
 
+  
   useEffect(() => {
     if (!comicsData) {
       return;
     }
 
     const filteredAndSortedComics = comicsData
-      .filter((comic) => {
-        if (filterOption === 'wszystkie') {
-          return true;
-        } else if (filterOption === 'zapowiedzi') {
-          return comic.preview === true;
-        } else if (filterOption === 'nowosci') {
-          return comic.new === true;
-        } else if (filterOption === 'dostepne') {
-          return comic.availability === true;
-        } else if (filterOption === 'ostatnie-sztuki') {
-          return comic.lastItems === true;
-        } else if (filterOption === 'wyprzedane') {
-          return comic.availability === false &&  !comic.preview;
-        } else {
-          return comic.filter.includes(filterOption);
-        }
-      })
+    .filter((comic) => {
+      if (filterOption === 'wszystkie') {
+        return true;
+      } else if (filterOption === 'zapowiedzi') {
+        return comic.preview === true;
+      } else if (filterOption === 'nowosci') {
+        return comic.new === true;
+      } else if (filterOption === 'dostepne') {
+        return comic.availability === true;
+      } else if (filterOption === 'ostatnie-sztuki') {
+        return comic.lastItems === true;
+      } else if (filterOption === 'wyprzedane') {
+        return comic.availability === false &&  !comic.preview;
+      } else {
+        return comic.filter.includes(filterOption);
+      }
+    })
       .filter((comic) => {
         return comic.title.toLowerCase().includes(searchQuery.toLowerCase());
       })
       .sort((a, b) => {
-        switch (sortOption) {
-          case 'najnowsze':
-            return b.id - a.id;
-          case 'najstarsze':
-            return a.id - b.id;
-          case 'alfabetycznie-a-z':
-            return a.title.localeCompare(b.title);
-          case 'alfabetycznie-z-a':
-            return b.title.localeCompare(a.title);
-          default:
-            return 0;
+
+        if (sortOptions[0].value === 'najnowsze') {
+          return b.id - a.id;
+        } else if (sortOptions[1].value === 'najstarsze') {
+          return a.id - b.id;
+        } else if (sortOptions[2].value === 'alfabetycznie-a-z') {
+          return a.title.localeCompare(b.title);
+        } else if (sortOptions[3].value === 'alfabetycznie-z-a') {
+          return b.title.localeCompare(a.title);
         }
       });
 
     setFilteredComics(filteredAndSortedComics);
-  }, [sortOption, filterOption, searchQuery, comicsData]);
+  }, [sortOptions, filterOption, searchQuery, comicsData]);
 
   const handleSortChange = (e) => {
-    setSortOption(e.target.value);
+    setSortOption(e.value);
+    console.log(e.value);
   };
 
   const handleFilterChange = (e) => {
@@ -78,10 +82,19 @@ const CustomizationPanel = ({ comicsData }) => {
     <>
       <div className={styles.customize}>
 
-      {/* <Select options={options} />  */}
 
-        <div className={styles.sort}>
-          <label htmlFor='sort'>Sortuj:</label>
+      <Select
+        className="basic-single"
+        classNamePrefix="select"
+        defaultValue={sortOptions[0]}
+               name="color"
+        options={sortOptions}
+        placeholder="Sortuj"
+        onChange={handleSortChange}
+      />
+
+    
+     {/*    <div className={styles.sort}>
           <select
             name='sort'
             className={styles.sort_input}
@@ -94,8 +107,14 @@ const CustomizationPanel = ({ comicsData }) => {
             <option value='alfabetycznie-a-z'>Alfabetycznie A-Z</option>
             <option value='alfabetycznie-z-a'>Alfabetycznie Z-A</option>
           </select>
-        </div>
+        </div> */}
 
+
+
+
+
+
+  
         <div className={styles.filters}>
           <label htmlFor='filters'>Filtruj:</label>
           <select

@@ -10,14 +10,14 @@
   font-weight: var(--fw-medium);
 }
 
-.sort,
+/* .sort,
 .filters,
 .search_main_cover {
   display: flex;
   grid-template-columns: auto;
   column-gap: 0.7rem;
   line-height: 2.2rem;
-}
+} */
 
 /* text elements to the left of input or select */
 .sort > :nth-child(odd),

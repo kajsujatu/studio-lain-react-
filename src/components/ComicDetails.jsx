@@ -47,20 +47,17 @@ const ComicDetails = ({ comicsData }) => {
   const bind = useGesture({
     onDrag: ({ movement: [mx, my] }) => {
       if (isMobile) {
-        console.log('Dragged:', mx, my);
-        // Sprawdź kierunek przesunięcia
-        if (mx > 0) {
-          // Ruch w prawo
+        console.log('Dragged:', mx, my,);
+        if (mx > 20) {
           handleSwipeLeft();
-        } else if (mx < 0) {
-          // Ruch w lewo
+        } else if (mx < -20) {
           handleSwipeRight();
         }
       }
     },
     options: {
-      threshold: 15, 
-      velocity: 0.1,
+      threshold: 10, 
+      velocity: 0.5,
     },
   });
 
@@ -182,9 +179,7 @@ const ComicDetails = ({ comicsData }) => {
             ></div>
           )}
         </div>
-        <main className='container_page' 
-        // {...bind()} style={{ width: '100%', height: '100%' }} 
-         >
+        <main className='container_page' {...bind()} style={{ width: '100%', height: '100%' }}>
         {isMobile && <div className={styles.blank_for_mobile_touch} /> }
           <div className={styles.container_covers}>
             <img src={selectedCover} alt='' className={styles.cover_big} />
