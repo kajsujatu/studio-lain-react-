@@ -4,7 +4,6 @@ import styles from './CustomizationPanel.module.css';
 import ComicList from './ComicList';
 import Select from 'react-select';
 
-
 const sortOptions = [
   { value: 'najnowsze', label: 'Najnowsze' },
   { value: 'najstarsze', label: 'Najstarsze' },
@@ -12,66 +11,105 @@ const sortOptions = [
   { value: 'alfabetycznie-z-a', label: 'Alfabetycznie Z-A' },
 ];
 
+const filterOptions = [
+  { value: 'wszystkie', label: 'Wszystkie' },
+  { value: 'zapowiedzi', label: 'Zapowiedzi' },
+  { value: 'nowosci', label: 'Nowości' },
+  { value: 'dostepne', label: 'Dostępne' },
+  { value: 'ostatnie-sztuki', label: 'Ostatnie sztuki' },
+  { value: 'wyprzedane', label: 'Wyprzedane' },
+  { value: 'antologie-integrale', label: 'Antologie/Integrale' },
+  { value: 'alan-moore', label: 'Alan Moore' },
+  { value: 'enrique-fernandez', label: 'Enrique Fernandez' },
+  { value: 'lukasz-kowalczuk', label: 'Łukasz Kowalczuk' },
+  { value: 'seria-abc-warriors', label: 'seria ABC Warriors' },
+  { value: 'seria-absalom', label: 'seria Absalom' },
+  { value: 'seria-sedzia-dredd', label: 'seria Sędzia Dredd' },
+  {
+    value: 'seria-uniwersum-dredda-sedzia-anderson',
+    label: 'seria uniwersum Dredda: Sędzia Anderson',
+  },
+  {
+    value: 'seria-uniwersum-dredda-lawless',
+    label: 'seria uniwersum Dredda: Lawless',
+  },
+  {
+    value: 'seria-uniwersum-dredda-mroczni-sedziowie',
+    label: 'seria uniwersum Dredda: Mroczni Sędziowie',
+  },
+  { value: 'seria-slaine', label: 'seria Sláine' },
+  { value: 'seria-solo', label: 'seria SOLO' },
+  { value: 'seria-stickleback', label: 'seria Stickleback' },
+  { value: 'seria-straznicy-masery', label: 'seria Strażnicy Masery' },
+  { value: 'seria-yiu', label: 'seria Yiu' },
+];
 
 const CustomizationPanel = ({ comicsData }) => {
-
-
-
   const [sortOption, setSortOption] = useState('najnowsze');
-  const [filterOption, setFilterOption] = useState('wszystkie');
+  const [filterOption, setFilterOption] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredComics, setFilteredComics] = useState([]);
-
-  
+  const [filteredComics, setFilteredComics] = useState(comicsData);
   useEffect(() => {
     if (!comicsData) {
       return;
     }
 
-    const filteredAndSortedComics = comicsData
-    .filter((comic) => {
-      if (filterOption === 'wszystkie') {
-        return true;
-      } else if (filterOption === 'zapowiedzi') {
-        return comic.preview === true;
-      } else if (filterOption === 'nowosci') {
-        return comic.new === true;
-      } else if (filterOption === 'dostepne') {
-        return comic.availability === true;
-      } else if (filterOption === 'ostatnie-sztuki') {
-        return comic.lastItems === true;
-      } else if (filterOption === 'wyprzedane') {
-        return comic.availability === false &&  !comic.preview;
-      } else {
-        return comic.filter.includes(filterOption);
-      }
-    })
-      .filter((comic) => {
-        return comic.title.toLowerCase().includes(searchQuery.toLowerCase());
-      })
-      .sort((a, b) => {
-
-        if (sortOptions[0].value === 'najnowsze') {
+    const sortedComics = comicsData.slice().sort((a, b) => {
+      switch (sortOption) {
+        case 'najnowsze':
           return b.id - a.id;
-        } else if (sortOptions[1].value === 'najstarsze') {
+        case 'najstarsze':
           return a.id - b.id;
-        } else if (sortOptions[2].value === 'alfabetycznie-a-z') {
+        case 'alfabetycznie-a-z':
           return a.title.localeCompare(b.title);
-        } else if (sortOptions[3].value === 'alfabetycznie-z-a') {
+        case 'alfabetycznie-z-a':
           return b.title.localeCompare(a.title);
+        default:
+          return 0;
+      }
+    });
+
+    const filteredComics = sortedComics
+      .filter((comic) => {
+        if (filterOption.includes('wszystkie')) {
+          return true;
         }
+
+        const filters = filterOption.map((option) => {
+          switch (option) {
+            case 'zapowiedzi':
+              return comic.preview === true;
+            case 'nowosci':
+              return comic.new === true;
+            case 'dostepne':
+              return comic.availability === true;
+            case 'ostatnie-sztuki':
+              return comic.lastItems === true;
+            case 'wyprzedane':
+              return comic.availability === false && !comic.preview;
+            default:
+              return comic.filter.includes(option);
+          }
+        });
+
+        return filters.every((filter) => filter === true);
+      })
+      .filter((comic) => {
+        // Filtrowanie na podstawie tytułu
+        return comic.title.toLowerCase().includes(searchQuery.toLowerCase());
       });
 
-    setFilteredComics(filteredAndSortedComics);
-  }, [sortOptions, filterOption, searchQuery, comicsData]);
-
+    setFilteredComics(filteredComics);
+  }, [sortOption, filterOption, searchQuery, comicsData]);
   const handleSortChange = (e) => {
     setSortOption(e.value);
     console.log(e.value);
   };
 
-  const handleFilterChange = (e) => {
-    setFilterOption(e.target.value);
+  const handleFilterChange = (selectedOptions) => {
+    const selectedValues = selectedOptions.map((option) => option.value);
+    setFilterOption(selectedValues);
+    console.log(selectedValues);
   };
 
   const handleSearchChange = (e) => {
@@ -81,87 +119,32 @@ const CustomizationPanel = ({ comicsData }) => {
   return (
     <>
       <div className={styles.customize}>
+        <Select
+          className='basic-single'
+          classNamePrefix='select'
+          
+          name='sort'
+          options={sortOptions}
+          placeholder='Sortuj'
+          onChange={handleSortChange}
+        />
 
-
-      <Select
-        className="basic-single"
-        classNamePrefix="select"
-        defaultValue={sortOptions[0]}
-               name="color"
-        options={sortOptions}
-        placeholder="Sortuj"
-        onChange={handleSortChange}
-      />
-
-    
-     {/*    <div className={styles.sort}>
-          <select
-            name='sort'
-            className={styles.sort_input}
-            size='1'
-            value={sortOption}
-            onChange={handleSortChange}
-          >
-            <option value='najnowsze'>Najnowsze</option>
-            <option value='najstarsze'>Najstarsze</option>
-            <option value='alfabetycznie-a-z'>Alfabetycznie A-Z</option>
-            <option value='alfabetycznie-z-a'>Alfabetycznie Z-A</option>
-          </select>
-        </div> */}
-
-
-
-
-
-
-  
-        <div className={styles.filters}>
-          <label htmlFor='filters'>Filtruj:</label>
-          <select
-            name='filters'
-            className={styles.filters_input}
-            size='1'
-            value={filterOption}
-            onChange={handleFilterChange}
-          >
-            <option value='wszystkie'>Wszystkie</option>
-            <option value='zapowiedzi'>Zapowiedzi</option>
-            <option value='nowosci'>Nowości</option>
-            <option value='dostepne'>Dostępne</option>
-            <option value='ostatnie-sztuki'>Ostatnie sztuki</option>
-            <option value='wyprzedane'>Wyprzedane</option>
-            <option value='antologie-integrale'>Antologie/Integrale</option>
-            <option value='alan-moore'>Alan Moore</option>
-            <option value='enrique-fernandez'>Enrique Fernandez</option>
-            <option value='lukasz-kowalczuk'>Łukasz Kowalczuk</option>
-            <option value='seria-abc-warriors'>seria ABC Warriors</option>
-            <option value='seria-absalom'>seria Absalom</option>
-            <option value='seria-sedzia-dredd'>seria Sędzia Dredd</option>
-            <option value='seria-uniwersum-dredda-sedzia-anderson'>
-              seria uniwersum Dredda - Sędzia Anderson
-            </option>
-            <option value='seria-uniwersum-dredda-lawless'>
-              seria uniwersum Dredda - Lawless
-            </option>
-            <option value='seria-uniwersum-dredda-mroczni-sedziowie'>
-              seria uniwersum Dredda - Mroczni Sędziowie
-            </option>
-            <option value='seria-slaine'>seria Sláine</option>
-            <option value='seria-solo'>seria SOLO</option>
-            <option value='seria-stickleback'>seria Stickleback</option>
-            <option value='seria-straznicy-masery'>
-              seria Strażnicy Masery
-            </option>
-            <option value='seria-yiu'>seria Yiu</option>
-          </select>
-        </div>
+        <Select
+          className='basic-single'
+          classNamePrefix='select'
+          isMulti
+          name='filters'
+          options={filterOptions}
+          placeholder='Filtruj'
+          onChange={handleFilterChange}
+        />
 
         <div className={styles.search_main_cover}>
-          <label htmlFor='search-main-cover-input'>Szukaj tytułu:</label>
           <input
             className={styles.search_main_cover_input}
             value={searchQuery}
             onInput={handleSearchChange}
+            placeholder='Szukaj tytułu...'
           />
         </div>
       </div>

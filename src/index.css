@@ -72,6 +72,7 @@ a:link,
 label {
   color: var(--main-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 :focus {
@@ -104,6 +105,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 */
+
 
 @media (prefers-color-scheme: dark) {
   body,
@@ -243,9 +245,6 @@ body.dark-mode a.active {
     margin-bottom: 0.75rem;
   }
 }
-
-
-
 
 @media (max-width: 25rem) {
   /* 400px */

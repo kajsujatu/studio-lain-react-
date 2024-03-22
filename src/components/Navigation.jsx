@@ -170,7 +170,7 @@ const Navigation = ({ comicsData }) => {
       </a>
       <div
         className={`${styles.search_options} ${
-          searchBarVisible ? styles.hidden : styles.visible
+          searchBarVisible ? styles.visible : styles.hidden
         }`}
       >
         <div className={styles.search_layout}>

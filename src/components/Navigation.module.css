@@ -4,6 +4,7 @@ header {
   background-color: var(--main-color);
   display: flex;
   align-items: center;
+  z-index: 12; 
 }
 
 .navbar {
@@ -90,14 +91,15 @@ header {
 .search_layout {
   position: absolute;
   display: flex;
-  height: 55%;
+  height: 10rem;
+  margin-top: 2.6rem;
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
   inset: 0;
   width: 100%;
   background-color: var(--main-color);
-  z-index: 99;
+  z-index: 10;
   flex-wrap: wrap;
   overflow-y: scroll;
 }
@@ -110,12 +112,13 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.2rem;
-  margin-top: 5rem;
-  width: 90%;
+  margin-top: 0;
+  width: 100%;
+  z-index: 12;
 }
 
 .search_options.hidden {
-  display: flex;
+  display: none;
 }
 
 .container {
@@ -125,17 +128,17 @@ header {
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
+  animation: ease-down-2 0.15s ease-out;
 }
 
 .icon_container {
   display: flex;
-}
-.icon_container > * {
-  padding-inline: 0.5rem;
+  gap: 1.5rem;
 }
 
+
 .search_input {
-  margin-top: 4rem;
+  margin-top: 0.75rem;
   height: 2rem;
   width: min(400px, 80%);
   justify-content: end;
