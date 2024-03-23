@@ -13,7 +13,7 @@ const sortOptions = [
 
 const filterOptions = [
   { value: 'wszystkie', label: 'Wszystkie' },
-  { value: 'zapowiedzi', label: 'Zapowiedzi' },
+  { value: 'zapowiedzi', label: 'Zapowiedzi', color: 'red' },
   { value: 'nowosci', label: 'Nowości' },
   { value: 'dostepne', label: 'Dostępne' },
   { value: 'ostatnie-sztuki', label: 'Ostatnie sztuki' },
@@ -46,7 +46,7 @@ const filterOptions = [
 
 const CustomizationPanel = ({ comicsData }) => {
   const [sortOption, setSortOption] = useState('najnowsze');
-  const [filterOption, setFilterOption] = useState([]);
+  const [filterOption, setFilterOption] = useState(['wszystkie']);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredComics, setFilteredComics] = useState(comicsData);
   useEffect(() => {
@@ -69,38 +69,35 @@ const CustomizationPanel = ({ comicsData }) => {
       }
     });
 
-    const filteredComics = sortedComics
-      .filter((comic) => {
-        if (filterOption.includes('wszystkie')) {
-          return true;
+    const filteredComics = sortedComics.filter((comic) => {
+      if (filterOption.includes('wszystkie')) {
+        return true; // Zwróć wszystkie komiksy
+      }
+    
+      return filterOption.some((option) => {
+        switch (option) {
+          case 'zapowiedzi':
+            return comic.preview === true;
+          case 'nowosci':
+            return comic.new === true;
+          case 'dostepne':
+            return comic.availability === true;
+          case 'ostatnie-sztuki':
+            return comic.lastItems === true;
+          case 'wyprzedane':
+            return comic.availability === false && !comic.preview;
+          default:
+            return comic.filter.includes(option);
         }
-
-        const filters = filterOption.map((option) => {
-          switch (option) {
-            case 'zapowiedzi':
-              return comic.preview === true;
-            case 'nowosci':
-              return comic.new === true;
-            case 'dostepne':
-              return comic.availability === true;
-            case 'ostatnie-sztuki':
-              return comic.lastItems === true;
-            case 'wyprzedane':
-              return comic.availability === false && !comic.preview;
-            default:
-              return comic.filter.includes(option);
-          }
-        });
-
-        return filters.every((filter) => filter === true);
-      })
-      .filter((comic) => {
-        // Filtrowanie na podstawie tytułu
-        return comic.title.toLowerCase().includes(searchQuery.toLowerCase());
       });
+    }).filter((comic) => {
+      return comic.title.toLowerCase().includes(searchQuery.toLowerCase());
+    });
 
     setFilteredComics(filteredComics);
   }, [sortOption, filterOption, searchQuery, comicsData]);
+
+  
   const handleSortChange = (e) => {
     setSortOption(e.value);
     console.log(e.value);
@@ -108,8 +105,7 @@ const CustomizationPanel = ({ comicsData }) => {
 
   const handleFilterChange = (selectedOptions) => {
     const selectedValues = selectedOptions.map((option) => option.value);
-    setFilterOption(selectedValues);
-    console.log(selectedValues);
+    setFilterOption(selectedValues.length ? selectedValues : ['wszystkie']);
   };
 
   const handleSearchChange = (e) => {
@@ -122,7 +118,6 @@ const CustomizationPanel = ({ comicsData }) => {
         <Select
           className='basic-single'
           classNamePrefix='select'
-          
           name='sort'
           options={sortOptions}
           placeholder='Sortuj'
@@ -149,7 +144,6 @@ const CustomizationPanel = ({ comicsData }) => {
         </div>
       </div>
 
-      {/* Sprawdź, czy comicsData są dostępne przed przekazaniem do ComicList */}
       {comicsData ? <ComicList comicsData={filteredComics} /> : null}
     </>
   );

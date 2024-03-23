@@ -3,14 +3,13 @@
   margin-block-start: 1.3rem;
   margin-block-end: 1.5rem;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 14rem auto 14rem;
   justify-content: stretch;
   align-content: center;
   margin-inline: auto;
   font-weight: var(--fw-medium);
   column-gap: 1rem;
 }
-
 
 /* .sort,
 .filters,
@@ -28,8 +27,6 @@
   text-align: center;
 }
 
-
-
 .sort_input,
 .filters_input,
 .search_main_cover_input {
@@ -40,6 +37,7 @@
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .sort_input,
@@ -69,9 +67,22 @@
 @media (max-width: 55rem) {
   .customize {
     margin-block-start: 1rem;
-    grid-template-columns: auto;
+    grid-template-columns: 14rem auto;
     row-gap: 0.5rem;
   }
 
-  
+  .customize :nth-child(2) {
+    order: 3;
+    grid-column: span 2;
+  }
+
+  .search_main_cover {
+    order: 1;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .customize {
+    grid-template-columns: 1fr 1fr;
+  }
 }
