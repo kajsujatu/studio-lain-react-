@@ -90,19 +90,20 @@ const Navigation = ({ comicsData }) => {
             navbarLinksVisible ? styles.visible : styles.hidden
           }`}
         >
-         
           <li>
             <NavLink
-              to='/' onClick={toggleNavbarLinks}
+              to='/'
+              onClick={toggleNavbarLinks}
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
-              } 
+              }
             >
               katalog
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggleNavbarLinks}
+            <NavLink
+              onClick={toggleNavbarLinks}
               to='/plany-wydawnicze'
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
@@ -112,7 +113,8 @@ const Navigation = ({ comicsData }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggleNavbarLinks}
+            <NavLink
+              onClick={toggleNavbarLinks}
               to='/o-nas'
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
@@ -122,7 +124,8 @@ const Navigation = ({ comicsData }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink onClick={toggleNavbarLinks}
+            <NavLink
+              onClick={toggleNavbarLinks}
               to='/gdzie-kupic'
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
@@ -169,52 +172,51 @@ const Navigation = ({ comicsData }) => {
         <span className={styles.bar}></span>
       </a>
       <div
-        className={`${styles.search_options} ${
+        className={`${styles.search_panel} ${
           searchBarVisible ? styles.visible : styles.hidden
         }`}
       >
-        <div className={styles.search_layout}>
-          <div className={styles.container}>
-            <input
-              className={styles.search_input}
-              value={searchInput}
-              onChange={(e) => {
-                setSearchInput(e.target.value);
-                handleSearchInput();
-              }}
-            />
-            <div className={styles.icon_container}>
-              <img
-                className={`${styles.icon} ${styles.icon_search_content}`}
-                src='../img/icon-search.svg'
-                alt='Wyszukaj'
-                onClick={handleSearchInput}
-              />
-              <img
-                className={styles.icon}
-                src='../img/icon-return.svg'
-                alt='Wyczyść'
-                onClick={clearSearchResults}
-              />
-              <img
-                className={styles.icon}
-                onClick={toggleSearchBar}
-                src='../img/icon-close.svg'
-                alt='Zamknij'
-              />
-            </div>
-            <output className={styles.search_output}>
-              {searchResults.map((result) => (
-                <Link to={`/komiks/${result.url}`} onClick={toggleSearchBar}>
-                  <div className={styles.search_output_single} key={result.id}>
-                    {parse(result.title)}
-                  </div>
-                </Link>
-              ))}
-            </output>
-          </div>
+        <div className={styles.search_panel_container}>
+        <input
+          className={styles.search_input}
+          value={searchInput}
+          onChange={(e) => {
+            setSearchInput(e.target.value);
+            handleSearchInput();
+          }}
+        />
+        <div className={styles.icon_container}>
+          <img
+            className={`${styles.icon} ${styles.icon_search_content}`}
+            src='../img/icon-search.svg'
+            alt='Wyszukaj'
+            onClick={handleSearchInput}
+          />
+          <img
+            className={styles.icon}
+            src='../img/icon-return.svg'
+            alt='Wyczyść'
+            onClick={clearSearchResults}
+          />
+          <img
+            className={styles.icon}
+            onClick={toggleSearchBar}
+            src='../img/icon-close.svg'
+            alt='Zamknij'
+          />
         </div>
+        <output className={styles.search_output}>
+          {searchResults.map((result) => (
+            <Link to={`/komiks/${result.url}`} onClick={toggleSearchBar}>
+              <div className={styles.search_output_single} key={result.id}>
+                {parse(result.title)}
+              </div>
+            </Link>
+          ))}
+        </output>
       </div>
+      </div>
+     
     </header>
   );
 };

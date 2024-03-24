@@ -4,7 +4,7 @@ header {
   background-color: var(--main-color);
   display: flex;
   align-items: center;
-  z-index: 12; 
+  z-index: 90;
 }
 
 .navbar {
@@ -59,7 +59,6 @@ header {
   color: var(--white-color);
 }
 
-
 .toggle_button {
   display: none;
 }
@@ -88,47 +87,44 @@ header {
   border-left: 1px solid var(--gray-color-dark);
 }
 
-.search_layout {
+.search_panel {
   position: absolute;
-  display: flex;
-  height: 10rem;
-  margin-top: 2.6rem;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
+  visibility: hidden;
+  overflow-y: auto;
+  margin-top: 5.2rem;
+  margin-bottom: auto;
   inset: 0;
   width: 100%;
-  background-color: var(--main-color);
   z-index: 10;
-  flex-wrap: wrap;
-  overflow-y: scroll;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(-10%);
+  z-index: 0;
 }
 
-.search_options.visible {
-  position: absolute;
-  display: flex;
-  align-content: flex-start;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-top: 0;
+.search_panel.visible {
+  visibility: visible;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(0);
+  z-index: 2;
+}
+
+.search_panel.hidden {
+  overflow-y: hidden;
+}
+
+.search_panel_container {
+  background-color: var(--main-color);
+  padding-bottom: 0.5rem;
   width: 100%;
-  z-index: 12;
-}
-
-.search_options.hidden {
-  display: none;
-}
-
-.container {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
-  animation: ease-down-2 0.15s ease-out;
+}
+
+.search_input {
+  min-height: 2rem;
+  width: min(400px, 80%);
+  border: 0;
 }
 
 .icon_container {
@@ -136,24 +132,14 @@ header {
   gap: 1.5rem;
 }
 
-
-.search_input {
-  margin-top: 0.75rem;
-  height: 2rem;
-  width: min(400px, 80%);
-  justify-content: end;
-  align-self: center;
-  border: 0;
-}
-
 .search_phrase {
   color: var(--bright-color-100);
 }
 
 .search_output {
+  min-height: 1rem;
   width: min(800px, 90%);
   text-align: center;
-  color: red;
   font-weight: 200;
 }
 
@@ -236,6 +222,10 @@ header {
     transform: scale(0.7);
   }
 
+  .search_panel_container {
+    padding-top: 0.75rem;
+  }
+
   .navbar_links {
     display: none;
     width: 100%;
@@ -316,7 +306,6 @@ header {
   }
 }
 
-
 @media (max-width: 33.313rem) {
   /* 533px */
 
@@ -345,5 +334,9 @@ header {
 
   .navbar_links.visible {
     top: 3.2rem;
+  }
+
+  .search_panel {
+    margin-top: 4.3rem;
   }
 }
