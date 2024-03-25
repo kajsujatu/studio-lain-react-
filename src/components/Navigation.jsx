@@ -77,6 +77,7 @@ const Navigation = ({ comicsData }) => {
   };
 
   return (
+    <>
     <header>
       <nav className={styles.navbar}>
         <img
@@ -171,53 +172,57 @@ const Navigation = ({ comicsData }) => {
         <span className={styles.bar}></span>
         <span className={styles.bar}></span>
       </a>
-      <div
-        className={`${styles.search_panel} ${
-          searchBarVisible ? styles.visible : styles.hidden
-        }`}
-      >
-        <div className={styles.search_panel_container}>
-        <input
-          className={styles.search_input}
-          value={searchInput}
-          onChange={(e) => {
-            setSearchInput(e.target.value);
-            handleSearchInput();
-          }}
-        />
-        <div className={styles.icon_container}>
-          <img
-            className={`${styles.icon} ${styles.icon_search_content}`}
-            src='../img/icon-search.svg'
-            alt='Wyszukaj'
-            onClick={handleSearchInput}
-          />
-          <img
-            className={styles.icon}
-            src='../img/icon-return.svg'
-            alt='Wyczyść'
-            onClick={clearSearchResults}
-          />
-          <img
-            className={styles.icon}
-            onClick={toggleSearchBar}
-            src='../img/icon-close.svg'
-            alt='Zamknij'
-          />
-        </div>
-        <output className={styles.search_output}>
-          {searchResults.map((result) => (
-            <Link to={`/komiks/${result.url}`} onClick={toggleSearchBar}>
-              <div className={styles.search_output_single} key={result.id}>
-                {parse(result.title)}
-              </div>
-            </Link>
-          ))}
-        </output>
-      </div>
-      </div>
+      
      
     </header>
+
+<div
+className={`${styles.search_panel} ${
+  searchBarVisible ? styles.visible : styles.hidden
+}`}
+>
+<div className={styles.search_panel_container}>
+<input
+  className={styles.search_input}
+  value={searchInput}
+  onChange={(e) => {
+    setSearchInput(e.target.value);
+    handleSearchInput();
+  }}
+/>
+<div className={styles.icon_container}>
+  <img
+    className={`${styles.icon} ${styles.icon_search_content}`}
+    src='../img/icon-search.svg'
+    alt='Wyszukaj'
+    onClick={handleSearchInput}
+  />
+  <img
+    className={styles.icon}
+    src='../img/icon-return.svg'
+    alt='Wyczyść'
+    onClick={clearSearchResults}
+  />
+  <img
+    className={styles.icon}
+    onClick={toggleSearchBar}
+    src='../img/icon-close.svg'
+    alt='Zamknij'
+  />
+</div>
+<output className={styles.search_output}>
+  {searchResults.map((result) => (
+    <Link to={`/komiks/${result.url}`} onClick={toggleSearchBar}>
+      <div className={styles.search_output_single} key={result.id}>
+      {result.title.replace(/<br>/g, '')}
+      </div>
+    </Link>
+  ))}
+</output>
+</div>
+</div>
+</>
+
   );
 };
 
