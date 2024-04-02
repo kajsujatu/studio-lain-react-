@@ -405,35 +405,6 @@ h1.title {
 @media (max-width: 33.313rem) {
   /* 533px */
 
-
-  .blank_for_mobile_touch {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  header {
-    height: 4.3rem;
-  }
-
-  .logo {
-    width: 6.25rem;
-    height: auto;
-    margin-top: 0.3rem;
-  }
-
-  .toggle_button {
-    top: 1.5rem;
-  }
-
-  .additions {
-    top: 1rem;
-  }
-
-  .navbar_links.active {
-    top: 3.3rem;
-  }
-
   .nav_page_container {
     display: none;
   }

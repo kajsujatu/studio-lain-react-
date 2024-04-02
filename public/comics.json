@@ -5408,8 +5408,8 @@
     "title": "Acriborea",
     "writer": "Sylvain Cordurié",
     "art": "Stéphane Créty",
-    "translator": "",
-    "proofreader": "",
+    "translator": "Jacek Bartecki",
+    "proofreader": "Agata Bogusławska",
     "description": "<p>Dla fanów <i>Armady</i>, <i>Orbital</i>, <i>Wiecznej Wojny</i> i <i>Universal War One</i> oraz <i>Universal War Two</i>.</p> <p><b><i>Acriborea</i> to jeden z komiksowych przebojów na rynku francuskim.</b> Ta militarna space opera zachwyciła zarówno czytelników i krytyków. To wybuchowa mieszanka akcji, science-fiction i spisków z poważnym dyskursem politycznym i społecznym. Okrucieństwo wojny, kolonializm, eksterminacja – to tematy, które podejmują autorzy, a które w dzisiejszym świecie nabierają jeszcze mocniejszego wydźwięku.</p> <p>Rok 2465. Ziemia od wieków nie nadaje się już do życia. Trwa exodus rasy ludzkiej. Aby zapewnić sobie przetrwanie zakłada ona kolonię w odległym systemie Ruivivar. Po pół wieku przygotowań nadchodzi czas przybycia nowej fali migrantów - dwunastu milionów ludzi. Koloniści mają zasiedlić planetę Acriborea. To wielkie wydarzenie skupia na sobie uwagę wszystkich… łącznie z rodowitymi mieszkańcami Ruivivaru. Rozpoczyna się walka o przetrwanie gatunku ludzkiego. Wiele będzie tu zależeć od losów dwójki mężczyzn – Jaspera Niemeyera i Nathana Palligera.</p> <p>Album zawiera kompletną i zamkniętą historię. Zbiera w jeden pięć oryginalnych tomów.</p>",
     "img": {
       "coverMainSiteDesktop": "img/komiks/acriborea/acriborea_okladka-desktop.jpg",
@@ -5461,15 +5461,16 @@
         "inside10Alt": "przykładowa plansza komiksu Acriborea - 10"
       }
     },
+    "video": "https://www.facebook.com/plugins/video.php?height=272&href=https%3A%2F%2Fwww.facebook.com%2FStudioLain%2Fvideos%2F385281477739258%2F&show_text=false&width=560&t=0",
     "details": {
       "format": "210x295 mm",
       "pages": 256,
       "print": "kolorowy",
       "paper": "kredowy",
       "typeOfBookCover": "twarda",
-      "date": "29 marca 2024",
+      "date": "26 marca 2024",
       "edition": "I",
-      "ISBN": "",
+      "ISBN": "978-83-968925-4-6",
       "price": "139,00 zł",
       "copies": "800 sztuk"
     },
@@ -5483,31 +5484,28 @@
       "reviewTitles": {}
     },
     "relatedComics": {
-      "relatedComicsLinks": {
-
-      },
-      "relatedComicsImg": {
-
-      }
+      "relatedComicsLinks": {},
+      "relatedComicsImg": {}
     },
     "filter": "antologie-integrale",
-    "new": false,
+    "new": true,
     "availability": true,
     "lastItems": false,
-    "preview": true,
+    "preview": false,
     "buyShops": {
       "buyShop1": "gildia.pl",
       "buyShop2": "gildia.pl (okładka A)",
       "buyShop3": "gildia.pl (okładka B)",
-      "buyShop4": "komiksiarnia.pl"
+      "buyShop4": "komiksiarnia.pl",
+      "buyShop5": "robmydobrze.pl"
     },
     "buyLinks": {
       "buyLink1": "https://www.gildia.pl/komiksy/595650-acriborea",
       "buyLink2": "https://www.gildia.pl/komiksy/595648-acriborea-okladka-limitowana-a",
       "buyLink3": "https://www.gildia.pl/komiksy/595649-acriborea-okladka-limitowana-b",
-      "buyLink4": "https://komiksiarnia.pl/studio-lain/18014-acriborea.html"     
+      "buyLink4": "https://komiksiarnia.pl/studio-lain/18014-acriborea.html",
+      "buyLink5": "https://robmydobrze.pl/produkt/acriborea"
     },
     "url": "acriborea"
   }
-
 ]

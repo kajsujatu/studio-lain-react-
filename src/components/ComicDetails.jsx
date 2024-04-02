@@ -325,6 +325,10 @@ const ComicDetails = ({ comicsData }) => {
             {parse(selectedComic.description)}
           </div>
 
+        {/*   <div className={styles.video}>
+          <iframe src={selectedComic.video} width="560" height="272" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          </div> */}
+
           <div className={styles.inside_panels}>
             <div className={styles.inside_panels_headline}>
               <img

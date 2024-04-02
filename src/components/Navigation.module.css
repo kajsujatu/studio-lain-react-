@@ -150,7 +150,7 @@ header {
 }
 
 .search_output_single:hover {
- background-color: var(--gray-color-dark);
+  background-color: var(--gray-color-dark);
 }
 
 .search_output a {
@@ -315,17 +315,11 @@ header {
   }
 
   .navbar {
-    margin-inline: -0.5rem;
+    margin-inline: -2rem;
   }
 
   .logo {
-    transform: scale(0.6);
-    margin-left: -0.25rem;
-  }
-
-  .toggle_button {
-    right: calc(50% - 28px);
-    padding: 16px;
+    transform: scale(0.5);
   }
 
   .additions {
@@ -333,11 +327,22 @@ header {
     right: 0.5rem;
   }
 
+  .toggle_button {
+    top: 0.5rem;
+    right: calc(50% - 28px);
+    padding: 16px;
+  }
+
   .navbar_links.visible {
     top: 3.2rem;
+  }
+
+  .navbar_links.active {
+    top: 3.3rem;
   }
 
   .search_panel {
     margin-top: 4.3rem;
   }
+
 }

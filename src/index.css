@@ -79,9 +79,14 @@ label {
   outline: 1px solid var(--gray-color);
 }
 
+p {
+  text-wrap: pretty;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 /* button {
@@ -105,7 +110,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 */
-
 
 @media (prefers-color-scheme: dark) {
   body,
@@ -174,10 +178,24 @@ body.dark-mode label {
   color: var(--gray-color-light);
 }
 
-body.dark-mode a,
 body.dark-mode header a,
 body.dark-mode span {
-  color: var(--gray-color) !important;
+  color: var(--gray-color-light) !important;
+}
+
+body.dark-mode a,
+body.dark-mode a:visited,
+body.dark-mode a:link,
+body.dark-mode label {
+  color: var(--gray-color);
+}
+
+.select__input-container {
+  background-color: transparent !important;
+}
+
+body.dark-mode a:hover {
+  color: var(--white-color) !important;
 }
 
 body.dark-mode .sl-close,
@@ -197,7 +215,7 @@ body.dark-mode .nav_page_left {
 }
 
 body.dark-mode .customize {
-  color: #b7b7b7;
+  color: var(--gray-color-light);
 }
 
 body.dark-mode .sort_input,
@@ -212,7 +230,7 @@ body.dark-mode .breadcrumbs {
   color: #d7d7d7;
 }
 
-body.dark-mode a.active {
+body.dark-mode a.hover {
   color: var(--white-color);
 }
 
@@ -237,7 +255,7 @@ body.dark-mode a.active {
     padding: 1rem 0 2rem 0;
     border: 7px solid var(--main-color);
     border-radius: 0;
-    margin: 0;
+    margin-top: 4.3rem;
     gap: 1rem;
   }
 
