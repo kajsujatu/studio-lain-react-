@@ -28,7 +28,6 @@ const ComicDetails = ({ comicsData }) => {
 
   const handleClick = () => navigate(-1);
 
-
   const containerRef = useRef(null);
   const isMobile = useMediaQuery('(max-width: 533px)');
 
@@ -43,11 +42,11 @@ const ComicDetails = ({ comicsData }) => {
       navigate(`/komiks/${prevComic.url}`);
     }
   };
- 
+
   const bind = useGesture({
     onDrag: ({ movement: [mx, my] }) => {
       if (isMobile) {
-        console.log('Dragged:', mx, my,);
+        console.log('Dragged:', mx, my);
         if (mx > 20) {
           handleSwipeLeft();
         } else if (mx < -20) {
@@ -56,11 +55,10 @@ const ComicDetails = ({ comicsData }) => {
       }
     },
     options: {
-      threshold: 10, 
+      threshold: 10,
       velocity: 0.5,
     },
   });
-
 
   useEffect(() => {
     if (selectedComic) {
@@ -88,8 +86,6 @@ const ComicDetails = ({ comicsData }) => {
   const handleBuyClick = () => {
     setShowBuyLinks(!showBuyLinks);
   };
-
-
 
   const findPreviousComic = () => {
     // Sprawdź czy bieżący URL istnieje w danych komiksów
@@ -139,11 +135,6 @@ const ComicDetails = ({ comicsData }) => {
     navigate(`/komiks/${nextComic.url}`);
   };
 
-
-  
-
-
-
   // simplelightbox
   useEffect(() => {
     if (!selectedComic) {
@@ -165,8 +156,6 @@ const ComicDetails = ({ comicsData }) => {
     return <div>Nie znalazłem takiej strony.</div>;
   }
 
-  
-
   return (
     <>
       <div className={styles.container}>
@@ -179,8 +168,12 @@ const ComicDetails = ({ comicsData }) => {
             ></div>
           )}
         </div>
-        <main className='container_page' {...bind()} style={{ width: '100%', height: '100%' }}>
-        {isMobile && <div className={styles.blank_for_mobile_touch} /> }
+        <main
+          className='container_page'
+          {...bind()}
+          style={{ width: '100%', height: '100%' }}
+        >
+          {isMobile && <div className={styles.blank_for_mobile_touch} />}
           <div className={styles.container_covers}>
             <img src={selectedCover} alt='' className={styles.cover_big} />
 
@@ -325,17 +318,27 @@ const ComicDetails = ({ comicsData }) => {
             {parse(selectedComic.description)}
           </div>
 
-        {/*   <div className={styles.video}>
-          <iframe src={selectedComic.video} width="560" height="272" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-          </div> */}
-
+          {selectedComic.video && (
+            <div className={styles.video}>
+              <span className={styles.inside_samples}>PREZENTACJA VIDEO</span>
+              <div>
+                <iframe
+                  src={selectedComic.video}
+                  width='560'
+                  height='272'
+                  frameborder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full'
+                ></iframe>
+              </div>
+            </div>
+          )}
           <div className={styles.inside_panels}>
             <div className={styles.inside_panels_headline}>
-              <img
+              {/*  <img
                 className={`${styles.icon} ${styles.icon_zoom_in}`}
                 src='../img/icon-zoom-in.svg'
                 alt='Powiększ'
-              />
+              /> */}
               <span className={styles.inside_samples}>PRZYKŁADOWE PLANSZE</span>
             </div>
             <div className={`gallery ${styles.img_inside}`}>

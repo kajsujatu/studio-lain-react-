@@ -66,9 +66,13 @@
   padding-block-start: 1rem;
 }
 
+.video {
+  order: 4;
+}
+
 /* SECTION PANELS */
 .inside_panels {
-  order: 4;
+  order: 5;
   display: grid;
   justify-items: center;
   place-self: center;
@@ -88,7 +92,7 @@
 }
 
 .review_panel {
-  order: 5;
+  order: 6;
   display: grid;
   justify-items: center;
   place-self: center;
@@ -330,7 +334,7 @@ h1.title {
 }
 
 .related_comics_section {
-  order: 5;
+  order: 7;
   margin-top: 5rem;
   width: auto;
   display: flex;
@@ -365,10 +369,24 @@ h1.title {
 .inside_thumbnails {
   height: 290px;
   cursor: pointer;
+  position: relative;
 }
 
 .inside_thumbnails:hover {
-  outline: 2px solid #dcdcdc;
+/*   outline: 2px solid #dcdcdc;
+  filter: saturate(30%); */
+}
+
+.inside_thumbnails:hover::after {
+  content: ''; /* Dodanie treści do pseudoelementu */
+  position: absolute; /* Ustawienie pozycji absolutnej */
+  top: 50%; /* Wyśrodkowanie pionowe */
+  left: 50%; /* Wyśrodkowanie poziome */
+  transform: translate(-50%, -50%); /* Przesunięcie na środek obrazka */
+  width: 40px; /* Szerokość lupy */
+  height: 40px; /* Wysokość lupy */
+  background-image: url('icon-zoom-in.svg'); /* Dodanie obrazka lupy */
+  background-size: cover; /* Dopasowanie obrazka */
 }
 
 .current_page {
