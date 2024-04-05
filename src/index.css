@@ -206,7 +206,7 @@ body.dark-mode .sl-counter {
 }
 
 body.dark-mode .container_page {
-  border: 17px solid var(--main-color);
+  border: 7px solid var(--main-color);
   background-color: var(--main-color);
 }
 

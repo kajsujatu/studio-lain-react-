@@ -4996,6 +4996,7 @@
         "inside3Alt": "przykładowa plansza komiksu Thorinth - 3"
       }
     },
+    "video": "../video/thorinth.mp4",
     "details": {
       "format": "210x297 mm",
       "pages": 296,
@@ -5352,6 +5353,7 @@
         "inside13Alt": "przykładowa plansza komiksu Ziarno Szaleństwa - 13"
       }
     },
+    "video": "../video/ziarno-szalenstwa.mp4",
     "details": {
       "format": "210x295 mm",
       "pages": 196,
@@ -5461,7 +5463,7 @@
         "inside10Alt": "przykładowa plansza komiksu Acriborea - 10"
       }
     },
-    "video": "https://www.facebook.com/plugins/video.php?height=272&href=https%3A%2F%2Fwww.facebook.com%2FStudioLain%2Fvideos%2F385281477739258%2F&show_text=false&width=560&t=0",
+    "video": "../video/acriborea.mp4",
     "details": {
       "format": "210x295 mm",
       "pages": 256,

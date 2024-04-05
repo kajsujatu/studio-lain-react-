@@ -322,13 +322,10 @@ const ComicDetails = ({ comicsData }) => {
             <div className={styles.video}>
               <span className={styles.inside_samples}>PREZENTACJA VIDEO</span>
               <div>
-                <iframe
-                  src={selectedComic.video}
-                  width='560'
-                  height='272'
-                  frameborder='0'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full'
-                ></iframe>
+                <video width='560' height='272' controls>
+                  <source src={selectedComic.video} type='video/mp4' />
+                  Twoja przeglądarka nie obsługuje video.
+                </video>
               </div>
             </div>
           )}
