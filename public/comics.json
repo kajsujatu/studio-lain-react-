@@ -1398,8 +1398,8 @@
     },
     "filter": "antologie-integrale",
     "new": false,
-    "availability": true,
-    "lastItems": true,
+    "availability": false,
+    "lastItems": false,
     "buyShops": {
       "buyShop1": "gildia.pl"
     },

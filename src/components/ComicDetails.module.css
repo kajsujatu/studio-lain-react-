@@ -66,8 +66,15 @@
   padding-block-start: 1rem;
 }
 
-.video {
+.video_container {
   order: 4;
+}
+
+.video {
+  max-width: 560px;
+  max-height: 272px;
+  width: 100%;
+  height: 100%;
 }
 
 /* SECTION PANELS */
@@ -79,13 +86,7 @@
   width: 100%;
 }
 
-.inside_panels_headline {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.inside_samples {
+.headline_media {
   display: block;
   text-align: center;
   font-size: 1.3rem;
@@ -475,12 +476,4 @@ h1.title {
 @media (max-width: 25rem) {
   /* 400px */
 
-  .inside_panels_headline {
-    gap: 0;
-    width: 80%;
-  }
-
-  .inside_samples {
-    text-align: center;
-  }
 }

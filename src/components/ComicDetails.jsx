@@ -319,10 +319,10 @@ const ComicDetails = ({ comicsData }) => {
           </div>
 
           {selectedComic.video && (
-            <div className={styles.video}>
-              <span className={styles.inside_samples}>PREZENTACJA VIDEO</span>
+            <div className={styles.video_container}>
+              <span className={styles.headline_media}>PREZENTACJA VIDEO</span>
               <div>
-                <video width='560' height='272' controls>
+                <video className={styles.video} controls>
                   <source src={selectedComic.video} type='video/mp4' />
                   Twoja przeglądarka nie obsługuje video.
                 </video>
@@ -330,14 +330,14 @@ const ComicDetails = ({ comicsData }) => {
             </div>
           )}
           <div className={styles.inside_panels}>
-            <div className={styles.inside_panels_headline}>
+            
               {/*  <img
                 className={`${styles.icon} ${styles.icon_zoom_in}`}
                 src='../img/icon-zoom-in.svg'
                 alt='Powiększ'
               /> */}
-              <span className={styles.inside_samples}>PRZYKŁADOWE PLANSZE</span>
-            </div>
+              <span className={styles.headline_media}>PRZYKŁADOWE PLANSZE</span>
+         
             <div className={`gallery ${styles.img_inside}`}>
               {selectedComic.img.insidePanels &&
                 Object.keys(selectedComic.img.insidePanels).map(

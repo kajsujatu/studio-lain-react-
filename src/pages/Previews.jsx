@@ -533,6 +533,135 @@ const Previews = () => {
 
         <div className={styles.comics_preview}>
           <div className={styles.comics_preview_img}>
+            <img src='./img/zapowiedzi/fathom.jpg'></img>
+          </div>
+          <div className={styles.comics_preview_info}>
+            <h1 className={styles.title}>Fathom</h1>
+            <ul className={`${styles.comics_data} ${styles.main_info}`}>
+              <li>Scenariusz</li>
+              <li>Michael Turner</li>
+              <li>Ilustracje</li>
+              <li>Michael Turner</li>
+            </ul>
+            <p>
+              Cały cykl Michaela Turnera (wszystko przed All New Fathom),
+              pozycja będzie liczyć ok. tysiąca stron.
+            </p>
+            <p>
+              Więcej informacji na temat zagranicznego wydania:
+              <a
+                href='https://www.bedetheque.com/serie-69662-BD-Fathom-1998.html'
+                target='_blank'
+              >
+                <b> Link BD</b>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.comics_preview}>
+          <div className={styles.comics_preview_img}>
+            <img src='./img/zapowiedzi/aphrodite-ix.jpg'></img>
+          </div>
+          <div className={styles.comics_preview_info}>
+            <h1 className={styles.title}>Aphrodite IX</h1>
+            <ul className={`${styles.comics_data} ${styles.main_info}`}>
+              <li>Scenariusz</li>
+              <li>David Wohl, Matt Hawkins</li>
+              <li>Ilustracje</li>
+              <li>David Finch, Stjepan Šejić</li>
+            </ul>
+            <p>
+              W jednym tomie album z rysunkami Davida Fincha i Rebrith z
+              rysunkami Stjepana Šejića.
+            </p>
+            <p>Więcej informacji na temat zagranicznych wydań:</p>
+            <p>
+              <a
+                href='https://www.bedetheque.com/serie-6104-BD-Aphrodite-IX.html'
+                target='_blank'
+              >
+                <b> Link BD Aphrodite IX</b>
+              </a>
+            </p>
+            <p>
+              <a
+                href='https://www.bedetheque.com/serie-81303-BD-Aphrodite-IX-Rebirth.html'
+                target='_blank'
+              >
+                <b> Link BD Aphrodite IX - Rebirth</b>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.comics_preview}>
+          <div className={styles.comics_preview_img}>
+            <img src='./img/zapowiedzi/darkness.jpg'></img>
+          </div>
+          <div className={styles.comics_preview_info}>
+            <h1 className={styles.title}>Darkness</h1>
+            <ul className={`${styles.comics_data} ${styles.main_info}`}>
+              <li>Scenariusz</li>
+              <li>Garth Ennis</li>
+              <li>Ilustracje</li>
+              <li>Marc Silvestri</li>
+            </ul>
+            <p>Complete Edition vol. 1 & 2, czyli kompletny run (0-40 zeszyty plus wszystkie 1/2 i crossovery z tego okresu).</p>
+            <p>Więcej informacji na temat zagranicznego wydania:</p>
+
+            <a
+              href='https://www.bedetheque.com/serie-2638-BD-Darkness-Editions-USA.html'
+              target='_blank'
+            >
+              <b> Link BD</b>
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.comics_preview}>
+          <div className={styles.comics_preview_img}>
+            <img src='./img/zapowiedzi/cyberforce.jpg'></img>
+          </div>
+          <div className={styles.comics_preview_info}>
+            <h1 className={styles.title}>Cyberforce</h1>
+            <ul className={`${styles.comics_data} ${styles.main_info}`}>
+              <li>Scenariusz</li>
+              <li>Marc Silvestri</li>
+              <li>Ilustracje</li>
+              <li>Marc Silvestri</li>
+            </ul>
+            <p>W skład albumu wejdzie: CYBERFORCE #0, CYBERFORCE THE TIN MEN OF WAR #1-4, THE KILLER INSTINCT CROSSOVER WITH WILDCATS #5-7, CYBERFORCE VOLUME 2 #1-13, CYBERFORCE ORIGINS: #1 CYBLADE, CYBERFORCE ORIGINS #2 STRYKER and the CYBERFORCE ANNUAL #1</p>
+            <p>Więcej informacji na temat zagranicznych wydań:</p>
+<p>
+            <a
+              href='https://www.bedetheque.com/serie-45810-BD-Cyberforce-1992.html'
+              target='_blank'
+            >
+              <b> Link BD Cyberforce 1992 Mindgames, The tin men of war</b>
+            </a>
+            </p>
+            <p>
+            <a
+              href='https://www.bedetheque.com/serie-45745-BD-Cyberforce-1993.html'
+              target='_blank'
+            >
+              <b> Link BD Cyberforce 1993 Killer instinct </b>
+            </a>
+            </p>
+            <p>
+            <a
+              href='https://www.bedetheque.com/serie-66942-BD-Cyberforce-Origins-1996.html'
+              target='_blank'
+            >
+              <b> Link BD Cyberforce 1996 Origins</b>
+            </a>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.comics_preview}>
+          <div className={styles.comics_preview_img}>
             <img src='./img/zapowiedzi/le-facteur-cratophane.webp'></img>
           </div>
           <div className={styles.comics_preview_info}>
